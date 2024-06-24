@@ -13,7 +13,7 @@ public class StateMachineScript : MonoBehaviour
         COMBAT,
         WinScreen,
         DeathScreen,
-        CUTSCENE1, CUTSCENE2
+        CUTSCENE
     }
 
     public enum MusicTYPE
@@ -35,22 +35,6 @@ public class StateMachineScript : MonoBehaviour
 
     public State currentState;
 
-    /*
-    if (currentState == State.Walking)
-    {
-        if(ExplorationMusicTYPE ==  MusicTYPE.Default)
-        {
-            AudioSource.....
-        }
-        if(ExplorationMusicTYPE ==  MusicTYPE.Western)
-        {
-
-        }
-        //etc.
-
-    }
-
-     */
 
 
     // Start is called before the first frame update

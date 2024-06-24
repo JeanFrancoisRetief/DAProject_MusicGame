@@ -6015,6 +6015,7 @@ GameObject:
   - component: {fileID: 1648259552}
   - component: {fileID: 1648259551}
   - component: {fileID: 1648259553}
+  - component: {fileID: 1648259554}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -6074,6 +6075,21 @@ MonoBehaviour:
   VictoryMusicTYPE: 0
   DefeatMusicTYPE: 0
   NarrativeMusicTYPE: 0
+  currentState: 0
+--- !u!114 &1648259554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648259550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c909010af867634f8498b6e4907037c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateMachineScript: {fileID: 1648259553}
+  musicCustomizationScript: {fileID: 1648259551}
 --- !u!1 &1671932327
 GameObject:
   m_ObjectHideFlags: 0
