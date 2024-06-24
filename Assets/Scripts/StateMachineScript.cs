@@ -18,7 +18,7 @@ public class StateMachineScript : MonoBehaviour
 
     public enum MusicTYPE
     {
-        Default,
+        Default, //orchestral
         Western,
         Classical,
         Acoustic,
