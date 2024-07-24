@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     public bool readyToJump;
+    public int jumpClickCounter;
+    public int frameCounter;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -33,8 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Flight")]
     public bool inFlight;
-    public int flightTimer;
-    public int flightMaxTime;
+    public float flightTimer;
+    public float flightMaxTime;
+    public GameObject FlightParticleSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         readyToJump = true;
+        jumpClickCounter = 0;
         inFlight = false;
 
         flightTimer = flightMaxTime * 60;
@@ -69,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.drag = groundDrag;
             inFlight = false;
+            jumpClickCounter = 0;
         }
         else
         {
@@ -79,18 +84,28 @@ public class PlayerMovement : MonoBehaviour
 
         if(!grounded && Input.GetKeyDown(KeyCode.Space))
         {
-            inFlight = true;
-            flightTimer = flightMaxTime*60;
+            inFlight = !inFlight;
+            //flightTimer = flightMaxTime*60;
+            if(inFlight && /*(flightTimer > (flightMaxTime * 60 / 2)) &&*/ jumpClickCounter < 2)
+            {
+                Jump();
+            }
         }
 
         if (inFlight)
         {
             rb.useGravity = false;
             flightTimer--;
+            FlightParticleSystem.SetActive(true);
         }
         else
         {
             rb.useGravity = true;
+            if(flightTimer <= flightMaxTime*60)
+            {
+                flightTimer += 0.5f;
+            }
+            FlightParticleSystem.SetActive(false);
         }
 
         if(flightTimer <= 0)
@@ -98,6 +113,21 @@ public class PlayerMovement : MonoBehaviour
             inFlight = false;
         }
 
+        if (flightTimer > flightMaxTime * 60)
+        {
+            flightTimer = flightMaxTime * 60;
+        }
+
+        frameCounter++;
+        if(frameCounter > 60*7)
+        {
+            jumpClickCounter--;
+            frameCounter = 0;
+        }
+        if(jumpClickCounter <= 0)
+        {
+            jumpClickCounter = 0;
+        }
 
     }
 
@@ -151,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
         //reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        jumpClickCounter++;
     }
 
     private void ResetJump()

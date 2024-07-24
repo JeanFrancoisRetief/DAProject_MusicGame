@@ -5,6 +5,7 @@ using UnityEngine;
 public class StateMachineScript : MonoBehaviour
 {
     public MusicCustomizationScript musicCustomizationScript;
+    public PlayerMovement playerMovementScript; 
     public enum State
     {
         Walking,
@@ -78,7 +79,7 @@ public class StateMachineScript : MonoBehaviour
         {
             currentState = State.COMBAT;
         }
-        else if(Player.transform.position.y >= 10)  ///player way above the ground  -can use RAYCAST instead
+        else if(playerMovementScript.inFlight == true)//Player.transform.position.y >= 10)  
         {
             currentState = State.Flying;
         }
@@ -86,7 +87,7 @@ public class StateMachineScript : MonoBehaviour
         {
             currentState = State.Running;
         }
-        else
+        else //Default state
         {
             currentState = State.Walking;
         }
