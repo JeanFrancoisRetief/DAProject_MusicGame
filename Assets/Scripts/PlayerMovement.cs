@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Flight")]
     public bool inFlight;
+    public int flightTimer;
+    public int flightMaxTime;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         readyToJump = true;
         inFlight = false;
+
+        flightTimer = flightMaxTime * 60;
     }
 
     // Update is called once per frame
@@ -64,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if(grounded)
         {
             rb.drag = groundDrag;
+            inFlight = false;
         }
         else
         {
@@ -74,8 +79,25 @@ public class PlayerMovement : MonoBehaviour
 
         if(!grounded && Input.GetKeyDown(KeyCode.Space))
         {
-            inFlight = !inFlight;
+            inFlight = true;
+            flightTimer = flightMaxTime*60;
         }
+
+        if (inFlight)
+        {
+            rb.useGravity = false;
+            flightTimer--;
+        }
+        else
+        {
+            rb.useGravity = true;
+        }
+
+        if(flightTimer <= 0)
+        {
+            inFlight = false;
+        }
+
 
     }
 
