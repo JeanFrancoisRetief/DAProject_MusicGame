@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CombatScript : MonoBehaviour
 {
+    [Header("Damage")]
+    public int meleeDamage;
+    public int rangedDamage;
+
     [Header("Melee Attack")]
     public GameObject MeleeTriggerObject;
     public bool readyToMelee;
@@ -13,9 +17,9 @@ public class CombatScript : MonoBehaviour
     public GameObject RangedTriggerObject;
     public GameObject CrossAir;
 
-    [Header("Ranged Attack Orientation")]
-    public Transform CombatLookAt;
-    public Transform RangedTriggerOrientation;
+    //[Header("Ranged Attack Orientation")]
+    //public Transform CombatLookAt;
+    //public Transform RangedTriggerOrientation;
     
     // Start is called before the first frame update
     void Start()
@@ -30,7 +34,7 @@ public class CombatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RangedTriggerOrientation.LookAt(CombatLookAt);
+        //RangedTriggerOrientation.LookAt(CombatLookAt);
 
         if(Input.GetMouseButton(1))
         {
