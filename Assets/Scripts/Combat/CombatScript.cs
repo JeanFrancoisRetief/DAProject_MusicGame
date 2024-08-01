@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class CombatScript : MonoBehaviour
 {
+    [Header("State")]
+    public StateMachineScript stateMachineScript;
+
+    [Header("Health")]
+    public float playerHealth;
+    public float playerMaxHealth;
+    
     [Header("Damage")]
     public int meleeDamage;
     public int rangedDamage;
@@ -29,6 +36,8 @@ public class CombatScript : MonoBehaviour
 
         MeleeTriggerObject.SetActive(false);
         RangedTriggerObject.SetActive(false);
+
+        //playerHealth = 1000;
     }
 
     // Update is called once per frame
@@ -64,7 +73,36 @@ public class CombatScript : MonoBehaviour
         }
 
         
+
+        if((playerHealth < playerMaxHealth) && !(stateMachineScript.currentState == StateMachineScript.State.COMBAT) && !(playerHealth <= 0))
+        {
+            playerHealth++;
+        }
+
+        
     }
 
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "EnemyTrigger")
+        {
+            stateMachineScript.inCombat = true;
+        }
+        else
+        {
+            stateMachineScript.inCombat = false;
+        }
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "EnemyTrigger")
+        {
+            stateMachineScript.inCombat = false;
+        }
+
+    }
+
+
 }

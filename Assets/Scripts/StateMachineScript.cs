@@ -57,7 +57,8 @@ public class StateMachineScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ExplorationMusicTYPE + " " + CombatMusicTYPE + " " + VictoryMusicTYPE + " " + DefeatMusicTYPE + " " + NarrativeMusicTYPE);
+        //Debug.Log(ExplorationMusicTYPE + " " + CombatMusicTYPE + " " + VictoryMusicTYPE + " " + DefeatMusicTYPE + " " + NarrativeMusicTYPE);
+        Debug.Log(currentState);
 
         CheckIfInCombat();
         CheckIfInCutscene();
@@ -83,7 +84,7 @@ public class StateMachineScript : MonoBehaviour
         {
             currentState = State.Flying;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.LeftShift))
         {
             currentState = State.Running;
         }
