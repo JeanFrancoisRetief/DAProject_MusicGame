@@ -39,6 +39,7 @@ public class StateMachineScript : MonoBehaviour
     public GameObject Player;
     public GameObject WinScreenPanel;
     public GameObject DeathScreenPanel;
+    public GameObject CutscenePanel;
 
     public bool inCombat;
     public bool inCutscene;
@@ -91,6 +92,16 @@ public class StateMachineScript : MonoBehaviour
         else //Default state
         {
             currentState = State.Walking;
+        }
+
+
+        if(CutscenePanel.active == true)
+        {
+            inCutscene = true;
+        }
+        else
+        {
+            inCutscene = false;
         }
 
 
