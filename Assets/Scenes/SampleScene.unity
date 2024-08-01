@@ -6070,12 +6070,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicCustomizationScript: {fileID: 1648259551}
+  playerMovementScript: {fileID: 0}
   ExplorationMusicTYPE: 0
   CombatMusicTYPE: 0
   VictoryMusicTYPE: 0
   DefeatMusicTYPE: 0
   NarrativeMusicTYPE: 0
   currentState: 0
+  Player: {fileID: 0}
+  WinScreenPanel: {fileID: 0}
+  DeathScreenPanel: {fileID: 0}
+  CutscenePanel: {fileID: 0}
+  inCombat: 0
+  inCutscene: 0
 --- !u!114 &1648259554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6090,6 +6097,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachineScript: {fileID: 1648259553}
   musicCustomizationScript: {fileID: 1648259551}
+  Music_Walking_Default: {fileID: 0}
+  Music_Walking_Western: {fileID: 0}
+  Music_Walking_Classical: {fileID: 0}
+  Music_Walking_Acoustic: {fileID: 0}
+  Music_Walking_AIgenerated: {fileID: 0}
+  Music_Walking_Retro: {fileID: 0}
+  Music_Walking_AfricanLocal: {fileID: 0}
+  Music_Running_Default: {fileID: 0}
+  Music_Running_Western: {fileID: 0}
+  Music_Running_Classical: {fileID: 0}
+  Music_Running_Acoustic: {fileID: 0}
+  Music_Running_AIgenerated: {fileID: 0}
+  Music_Running_Retro: {fileID: 0}
+  Music_Running_AfricanLocal: {fileID: 0}
+  Music_Flying_Default: {fileID: 0}
+  Music_Flying_Western: {fileID: 0}
+  Music_Flying_Classical: {fileID: 0}
+  Music_Flying_Acoustic: {fileID: 0}
+  Music_Flying_AIgenerated: {fileID: 0}
+  Music_Flying_Retro: {fileID: 0}
+  Music_Flying_AfricanLocal: {fileID: 0}
+  Music_COMBAT_Default: {fileID: 0}
+  Music_COMBAT_Western: {fileID: 0}
+  Music_COMBAT_Classical: {fileID: 0}
+  Music_COMBAT_Acoustic: {fileID: 0}
+  Music_COMBAT_AIgenerated: {fileID: 0}
+  Music_COMBAT_Retro: {fileID: 0}
+  Music_COMBAT_AfricanLocal: {fileID: 0}
+  Music_WinScreen_Default: {fileID: 0}
+  Music_WinScreen_Western: {fileID: 0}
+  Music_WinScreen_Classical: {fileID: 0}
+  Music_WinScreen_Acoustic: {fileID: 0}
+  Music_WinScreen_AIgenerated: {fileID: 0}
+  Music_WinScreen_Retro: {fileID: 0}
+  Music_WinScreen_AfricanLocal: {fileID: 0}
+  Music_DeathScreen_Default: {fileID: 0}
+  Music_DeathScreen_Western: {fileID: 0}
+  Music_DeathScreen_Classical: {fileID: 0}
+  Music_DeathScreen_Acoustic: {fileID: 0}
+  Music_DeathScreen_AIgenerated: {fileID: 0}
+  Music_DeathScreen_Retro: {fileID: 0}
+  Music_DeathScreen_AfricanLocal: {fileID: 0}
+  Music_CUTSCENE_Default: {fileID: 0}
+  Music_CUTSCENE_Western: {fileID: 0}
+  Music_CUTSCENE_Classical: {fileID: 0}
+  Music_CUTSCENE_Acoustic: {fileID: 0}
+  Music_CUTSCENE_AIgenerated: {fileID: 0}
+  Music_CUTSCENE_Retro: {fileID: 0}
+  Music_CUTSCENE_AfricanLocal: {fileID: 0}
 --- !u!1 &1671932327
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,7 +7456,7 @@ GameObject:
   - component: {fileID: 1824599406}
   - component: {fileID: 1824599405}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MusicCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

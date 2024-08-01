@@ -10,6 +10,8 @@ public class DebugCam : MonoBehaviour
 
     public GameObject ExpText;
     public GameObject ComText;
+
+    public GameObject MusicCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,19 @@ public class DebugCam : MonoBehaviour
         else
         {
             ComText.SetActive(false);
+        }
+
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            if(MusicCanvas.active == true)
+            {
+                MusicCanvas.SetActive(false);
+            }
+            else
+            {
+                MusicCanvas.SetActive(true);
+            }
+            
         }
     }
 

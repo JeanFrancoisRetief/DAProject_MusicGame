@@ -18,6 +18,10 @@ public class HUD : MonoBehaviour
 
     [Header("Defeat Screen")]
     public GameObject LosePanel;
+
+    [Header("Music Screen")]
+    public GameObject MusicCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +62,17 @@ public class HUD : MonoBehaviour
         {
             FlightSlider.gameObject.SetActive(false);
             //HealthSlider.gameObject.SetActive(false);
+        }
+
+        if (WinPanel.active == true || LosePanel.active == true || MusicCanvas.active == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
     }
