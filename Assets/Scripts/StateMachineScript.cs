@@ -51,8 +51,8 @@ public class StateMachineScript : MonoBehaviour
     {
         inCombat = false;
         inCutscene = false;
-        WinScreenPanel.SetActive(false);
-        DeathScreenPanel.SetActive(false);
+        //WinScreenPanel.SetActive(false);
+        //DeathScreenPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,11 +61,11 @@ public class StateMachineScript : MonoBehaviour
         //Debug.Log(ExplorationMusicTYPE + " " + CombatMusicTYPE + " " + VictoryMusicTYPE + " " + DefeatMusicTYPE + " " + NarrativeMusicTYPE);
         Debug.Log(currentState);
 
-        CheckIfInCombat();
-        CheckIfInCutscene();
+        //CheckIfInCombat();
+        //CheckIfInCutscene();
 
 
-        if (inCutscene)
+        if (CutscenePanel.active == true)
         {
             currentState = State.CUTSCENE;
         }
@@ -95,14 +95,14 @@ public class StateMachineScript : MonoBehaviour
         }
 
 
-        if(CutscenePanel.active == true)
+        /*if(CutscenePanel.active == true)
         {
             inCutscene = true;
         }
         else
         {
             inCutscene = false;
-        }
+        }*/
 
 
     }

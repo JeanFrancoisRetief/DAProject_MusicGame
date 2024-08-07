@@ -39,7 +39,7 @@ public class HUD : MonoBehaviour
         }
         else
         {
-            LosePanel.SetActive(false);
+            //LosePanel.SetActive(false);
         }
 
         FlightSlider.value = playerMovementScript.flightTimer;
