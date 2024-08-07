@@ -85,8 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if(!grounded && Input.GetKeyDown(KeyCode.Space))
         {
             inFlight = !inFlight;
-            //flightTimer = flightMaxTime*60;
-            if(inFlight && /*(flightTimer > (flightMaxTime * 60 / 2)) &&*/ jumpClickCounter < 2)
+            if(inFlight && jumpClickCounter < 2)
             {
                 Jump();
             }
