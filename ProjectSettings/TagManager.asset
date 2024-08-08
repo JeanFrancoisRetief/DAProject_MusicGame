@@ -9,6 +9,7 @@ TagManager:
   - MeleeAttack
   - EnemyTrigger
   - VictoryTrigger
+  - PlayerTarget
   layers:
   - Default
   - TransparentFX
