@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     NavMeshAgent Enemy;
     GameObject Player;
-    float distance;
+    public float distance;
     // Start is called before the first frame update
     void Start()
     {

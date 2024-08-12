@@ -11,6 +11,7 @@ TagManager:
   - VictoryTrigger
   - PlayerTarget
   - EnemyMelee
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

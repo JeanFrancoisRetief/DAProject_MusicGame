@@ -97,6 +97,13 @@ public class CombatScript : MonoBehaviour
             rb.AddForce(direction.normalized * knockbackMultiplier);
             rb.AddForce(Vector3.up * knockbackMultiplier);
         }
+
+        if (other.tag == "EnemyProjectile")
+        {
+            playerHealth -= enemyRangedDamage;
+            Destroy(other.gameObject);
+        }
+            
     }
 
     private void OnTriggerStay(Collider other)
