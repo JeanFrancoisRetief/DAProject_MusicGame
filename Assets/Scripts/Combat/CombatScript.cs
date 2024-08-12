@@ -24,10 +24,15 @@ public class CombatScript : MonoBehaviour
     public GameObject RangedTriggerObject;
     public GameObject CrossAir;
 
+    [Header("Enemies")]
+    public int enemyMeleeDamage;
+    public int enemyRangedDamage;
+    public int knockbackMultiplier;
+
     //[Header("Ranged Attack Orientation")]
     //public Transform CombatLookAt;
     //public Transform RangedTriggerOrientation;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +85,18 @@ public class CombatScript : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EnemyMelee")
+        {
+            playerHealth -= enemyMeleeDamage;
+            Vector3 direction = transform.position - other.transform.position;
+            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+            rb.AddForce(direction.normalized * knockbackMultiplier);
+            rb.AddForce(Vector3.up * knockbackMultiplier);
+        }
     }
 
     private void OnTriggerStay(Collider other)

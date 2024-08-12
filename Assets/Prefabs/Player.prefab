@@ -581,6 +581,9 @@ MonoBehaviour:
   meleeFrameCounter: 0
   RangedTriggerObject: {fileID: 7212533758459205250}
   CrossAir: {fileID: 0}
+  enemyMeleeDamage: 50
+  enemyRangedDamage: 20
+  knockbackMultiplier: 500
 --- !u!1 &7212533758205199370
 GameObject:
   m_ObjectHideFlags: 0
