@@ -87,24 +87,7 @@ public class CombatScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "EnemyMelee")
-        {
-            playerHealth -= enemyMeleeDamage;
-            Vector3 direction = transform.position - other.transform.position;
-            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-            rb.AddForce(direction.normalized * knockbackMultiplier);
-            rb.AddForce(Vector3.up * knockbackMultiplier);
-        }
-
-        if (other.tag == "EnemyProjectile")
-        {
-            playerHealth -= enemyRangedDamage;
-            Destroy(other.gameObject);
-        }
-            
-    }
+    
 
     private void OnTriggerStay(Collider other)
     {
