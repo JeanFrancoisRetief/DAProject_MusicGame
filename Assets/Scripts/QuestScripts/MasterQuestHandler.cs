@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MasterQuestHandler : MonoBehaviour
 {
+    //USE THESE TO CHECK if(questCompleted == true)
     [Header("Main Quest Scripts")]
     public MainQuest001 mainQuest001;
     public MainQuest002 mainQuest002;
