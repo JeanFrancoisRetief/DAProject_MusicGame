@@ -9,6 +9,7 @@ public class MQ1TriggerScript : MonoBehaviour
         START,
         SpawnEnemies,
         PlayCutscene,
+        PlayDialogue,
         END
     }
 
@@ -33,23 +34,30 @@ public class MQ1TriggerScript : MonoBehaviour
     {
         if(TriggerType == Quest_Trigger_Type.START)
         {
-
+            //n.a. - at void start and master quest handler
         }
 
         if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
         {
-
+            mainQuest001Script.ShowTutPrompt002();
         }
 
         if (TriggerType == Quest_Trigger_Type.PlayCutscene)
         {
+            mainQuest001Script.PlayCutscene2();
+        }
 
+        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
+        {
+            mainQuest001Script.PlayDialogue();
         }
 
         if (TriggerType == Quest_Trigger_Type.END)
         {
-
+            mainQuest001Script.EndQuest();
         }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y - 5, transform.position.z);
 
     }
 }

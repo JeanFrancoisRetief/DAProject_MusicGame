@@ -22,15 +22,34 @@ public class MasterQuestHandler : MonoBehaviour
     [Header("Collectable Scripts")]
     public Collectables001 collectables001;
 
+    [Header("Cutscene Handler")]
+    public GameObject CutscenePanel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //OnMenuStartGameClick(); //Debug
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void OnMenuStartGameClick() //start of game -- start of Quest 1
+    {
+        CutscenePanel.SetActive(true);
+        mainQuest001.Cutscene1Video.SetActive(true);
+        Invoke(nameof(DeactivateVideos), 6);
+    }
+
+    public void DeactivateVideos()
+    {
+        mainQuest001.Cutscene1Video.SetActive(false);
+        mainQuest001.Cutscene2Video.SetActive(false);
+        //add more as we go
+
+        CutscenePanel.SetActive(false);
     }
 }

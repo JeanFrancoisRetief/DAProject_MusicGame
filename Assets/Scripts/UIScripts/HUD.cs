@@ -13,6 +13,16 @@ public class HUD : MonoBehaviour
     public Slider HealthSlider;
     public CombatScript combatScript;
 
+    [Header("Quest UI")]
+    public Text QuestTitleText;
+    public Text QuestObjectiveText;
+    public Text TutorialText;
+
+    [Header("Dialogue UI")]
+    public GameObject DialoguePanel;
+    public Text DialogueSpeakerText;
+    public Text SubtitlesText;
+
     [Header("Win Screen")]
     public GameObject WinPanel;
 
@@ -22,11 +32,21 @@ public class HUD : MonoBehaviour
     [Header("Music Screen")]
     public GameObject MusicCanvas;
 
+    [Header("Menu Screen")]
+    public GameObject MenuCanvas;
+
+    [Header("HUD Screen")]
+    public GameObject UICanvas;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         FlightSlider.maxValue = playerMovementScript.flightMaxTime*60;
         HealthSlider.maxValue = combatScript.playerMaxHealth; ;
+
+        DialoguePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,7 +84,7 @@ public class HUD : MonoBehaviour
             //HealthSlider.gameObject.SetActive(false);
         }
 
-        if (WinPanel.active == true || LosePanel.active == true || MusicCanvas.active == true)
+        if (WinPanel.active == true || LosePanel.active == true || MusicCanvas.active == true || MenuCanvas.active == true)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -75,6 +95,15 @@ public class HUD : MonoBehaviour
             Cursor.visible = false;
         }
 
+        if (MenuCanvas.active == true)
+        {
+            UICanvas.SetActive(false);
+        }
+        else
+        {
+            UICanvas.SetActive(true);
+        }
+
     }
 
     public void OnVictoryScreenExitClick()
@@ -83,4 +112,5 @@ public class HUD : MonoBehaviour
 
         WinPanel.SetActive(false);
     }
+
 }
