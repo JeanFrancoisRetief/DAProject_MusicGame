@@ -15,11 +15,12 @@ public class MainQuest001 : MonoBehaviour
     public MasterQuestHandler masterQuestHandler;
 
     private string tutText;
-
+    private string ObjectiveText;
     // Start is called before the first frame update
     void Start()
     {
         tutText = "WASD to walk\nMouse to use look around";
+        ObjectiveText = "Chase the human";
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class MainQuest001 : MonoBehaviour
         if(ThisQuest.active == true)
         {
             hud.QuestTitleText.text = "Close Encounter (_main_quest_001_StartCoroutine_Auto)";
-            hud.QuestObjectiveText.text = "Chase the human";
+            hud.QuestObjectiveText.text = ObjectiveText; 
             hud.TutorialText.text = tutText;
         }
     }
@@ -44,11 +45,17 @@ public class MainQuest001 : MonoBehaviour
         hud.QuestTitleText.text = "(_open_world_StartCoroutine_Auto)";
         hud.QuestObjectiveText.text = "Explore";
         hud.TutorialText.text = "";
-        
+
+        hud.WinPanel.SetActive(true);
+        hud.WonQuestTitleText.text = "_main_quest_001_StartCoroutine_Auto == Close Encounter with humankind";
+        hud.WonQuestObjectivesText.text = "Chased the human\nTalked to the human\nWent to farm house";
+
     }
 
     public void PlayCutscene2()
     {
+        ObjectiveText = "Go to farm house";
+        tutText = "It is next to the barn";
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene2Video.SetActive(true);
         Invoke(nameof(StopCutscenes), 10);

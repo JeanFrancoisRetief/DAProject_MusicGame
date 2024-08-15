@@ -25,6 +25,8 @@ public class HUD : MonoBehaviour
 
     [Header("Win Screen")]
     public GameObject WinPanel;
+    public Text WonQuestTitleText;
+    public Text WonQuestObjectivesText;
 
     [Header("Defeat Screen")]
     public GameObject LosePanel;
@@ -110,6 +112,12 @@ public class HUD : MonoBehaviour
     {
         
 
+        WinPanel.SetActive(false);
+    }
+
+    public void OnMusicButtonClick()
+    {
+        MusicCanvas.SetActive(true);
         WinPanel.SetActive(false);
     }
 

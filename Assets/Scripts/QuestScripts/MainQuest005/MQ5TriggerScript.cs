@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class MQ5TriggerScript : MonoBehaviour
 {
+    [Header("Please select Quest Trigger Type")]
+    public Quest_Trigger_Type TriggerType;
+    [Header("Corresponding Script")]
+    public MainQuest005 mainQuest005Script;
+
     public enum Quest_Trigger_Type
     {
         START,
         SpawnEnemies,
         PlayCutscene,
+        PlayDialogue,
         END
     }
-
-    [Header("Please select Quest Trigger Type")]
-    public Quest_Trigger_Type TriggerType;
-    [Header("Corresponding Script")]
-    public MainQuest005 mainQuest005Script;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,11 @@ public class MQ5TriggerScript : MonoBehaviour
         }
 
         if (TriggerType == Quest_Trigger_Type.PlayCutscene)
+        {
+
+        }
+
+        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
         {
 
         }

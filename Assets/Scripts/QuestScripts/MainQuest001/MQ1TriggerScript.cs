@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class MQ1TriggerScript : MonoBehaviour
 {
+    
+
+    [Header("Please select Quest Trigger Type")]
+    public Quest_Trigger_Type TriggerType;
+    [Header("Corresponding Script")]
+    public MainQuest001 mainQuest001Script;
+
     public enum Quest_Trigger_Type
     {
         START,
@@ -12,11 +19,6 @@ public class MQ1TriggerScript : MonoBehaviour
         PlayDialogue,
         END
     }
-
-    [Header("Please select Quest Trigger Type")]
-    public Quest_Trigger_Type TriggerType;
-    [Header("Corresponding Script")]
-    public MainQuest001 mainQuest001Script;
 
     // Start is called before the first frame update
     void Start()
@@ -32,32 +34,37 @@ public class MQ1TriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(TriggerType == Quest_Trigger_Type.START)
+        if (other.tag == "Player")
         {
-            //n.a. - at void start and master quest handler
-        }
+            if (TriggerType == Quest_Trigger_Type.START)
+            {
+                //n.a. - at void start and master quest handler
+            }
 
-        if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
-        {
-            mainQuest001Script.ShowTutPrompt002();
-        }
+            if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
+            {
+                mainQuest001Script.ShowTutPrompt002();
+            }
 
-        if (TriggerType == Quest_Trigger_Type.PlayCutscene)
-        {
-            mainQuest001Script.PlayCutscene2();
-        }
+            if (TriggerType == Quest_Trigger_Type.PlayCutscene)
+            {
+                mainQuest001Script.PlayCutscene2();
+            }
 
-        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
-        {
-            mainQuest001Script.PlayDialogue();
-        }
+            if (TriggerType == Quest_Trigger_Type.PlayDialogue)
+            {
+                mainQuest001Script.PlayDialogue();
+            }
 
-        if (TriggerType == Quest_Trigger_Type.END)
-        {
-            mainQuest001Script.EndQuest();
-        }
+            if (TriggerType == Quest_Trigger_Type.END)
+            {
+                mainQuest001Script.EndQuest();
+            }
 
-        transform.position = new Vector3(transform.position.x, transform.position.y - 5, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 5, transform.position.z);
+        }
+            
+        
 
     }
 }

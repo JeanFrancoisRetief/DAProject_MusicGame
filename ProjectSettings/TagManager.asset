@@ -12,6 +12,8 @@ TagManager:
   - PlayerTarget
   - EnemyMelee
   - EnemyProjectile
+  - MQ1Point1
+  - MQ1Point2
   layers:
   - Default
   - TransparentFX
