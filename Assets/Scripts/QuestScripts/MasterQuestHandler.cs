@@ -19,6 +19,20 @@ public class MasterQuestHandler : MonoBehaviour
     public SideQuest004 sideQuest004;
     public SideQuest005 sideQuest005;
 
+    [Header("Main Quest StartTriggers")]
+    public GameObject MQ2StartTrigger;
+    public GameObject MQ3StartTrigger;
+    public GameObject MQ4StartTrigger;
+    public GameObject MQ5StartTrigger;
+
+    [Header("Side Quest StartTriggers")]
+    public GameObject SQ1StartTrigger;
+    public GameObject SQ2StartTrigger;
+    public GameObject SQ3StartTrigger;
+    public GameObject SQ4StartTrigger;
+    public GameObject SQ5StartTrigger;
+
+
     [Header("Collectable Scripts")]
     public Collectables001 collectables001;
 
@@ -51,5 +65,22 @@ public class MasterQuestHandler : MonoBehaviour
         //add more as we go
 
         CutscenePanel.SetActive(false);
+    }
+
+    public void ActivateSideQuestStartTriggers()
+    {
+        SQ1StartTrigger.SetActive(true);
+        SQ2StartTrigger.SetActive(true);
+        SQ3StartTrigger.SetActive(true);
+        SQ4StartTrigger.SetActive(true);
+        SQ5StartTrigger.SetActive(true);
+    }
+    public void DeactivateSideQuestStartTriggers()
+    {
+        SQ1StartTrigger.SetActive(false);
+        SQ2StartTrigger.SetActive(false);
+        SQ3StartTrigger.SetActive(false);
+        SQ4StartTrigger.SetActive(false);
+        SQ5StartTrigger.SetActive(false);
     }
 }

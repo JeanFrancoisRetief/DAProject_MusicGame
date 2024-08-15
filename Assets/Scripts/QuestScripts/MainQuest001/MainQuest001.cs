@@ -21,6 +21,7 @@ public class MainQuest001 : MonoBehaviour
     {
         tutText = "WASD to walk\nMouse to use look around";
         ObjectiveText = "Chase the human";
+        masterQuestHandler.DeactivateSideQuestStartTriggers();
     }
 
     // Update is called once per frame
@@ -50,6 +51,8 @@ public class MainQuest001 : MonoBehaviour
         hud.WonQuestTitleText.text = "_main_quest_001_StartCoroutine_Auto == Close Encounter with humankind";
         hud.WonQuestObjectivesText.text = "Chased the human\nTalked to the human\nWent to farm house";
 
+        masterQuestHandler.MQ2StartTrigger.SetActive(true);//start of next main quest
+        masterQuestHandler.ActivateSideQuestStartTriggers();//open world
     }
 
     public void PlayCutscene2()
