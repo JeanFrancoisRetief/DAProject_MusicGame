@@ -34,7 +34,7 @@ public class MQ2TriggerScript : MonoBehaviour
     {
         if (TriggerType == Quest_Trigger_Type.START)
         {
-
+            mainQuest002Script.StartQuest();
         }
 
         if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
@@ -54,7 +54,7 @@ public class MQ2TriggerScript : MonoBehaviour
 
         if (TriggerType == Quest_Trigger_Type.END)
         {
-
+            mainQuest002Script.EndQuest();
         }
 
     }
