@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainQuest001 : MonoBehaviour
 {
+    public GameObject Enemies;
     [Header("Video Parent Objects")]
     public GameObject Cutscene1Video;
     public GameObject Cutscene2Video;
@@ -38,6 +39,11 @@ public class MainQuest001 : MonoBehaviour
     public void ShowTutPrompt002()
     {
         tutText = "Hold Left mouse click for melee spin attack\nHold Right mouse click to aim for ranged attack\nHold both Right and Left mouse click to fire lasers";
+    }
+
+    public void SpawnEnemies()
+    {
+        Enemies.SetActive(true);
     }
 
     public void EndQuest()

@@ -44,6 +44,7 @@ public class MQ1TriggerScript : MonoBehaviour
             if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
             {
                 mainQuest001Script.ShowTutPrompt002();
+                mainQuest001Script.SpawnEnemies();
             }
 
             if (TriggerType == Quest_Trigger_Type.PlayCutscene)
