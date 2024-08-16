@@ -24,6 +24,9 @@ public class MainQuest002 : MonoBehaviour
     public GameObject CarePackageObject008;
     public GameObject CarePackageObject009;
     public GameObject CarePackageObject010;
+    [Header("Other Variables")]
+    public GameObject EndQuestTrigger;
+    public GameObject StartQuestTrigger;
 
     //[Header("Other Variables")]
     [HideInInspector] public float CP001Ypos;
@@ -55,6 +58,13 @@ public class MainQuest002 : MonoBehaviour
             ObjectiveText = "Care packages collected " + packagesCollected.ToString() + " / 10";
             hud.QuestObjectiveText.text = ObjectiveText;
             hud.TutorialText.text = tutText;
+
+            if(packagesCollected == 10)
+            {
+                ObjectiveText = "Go back to nearby farm house";
+                tutText = "It is next to the nearby barn";
+                SpawnEndQuestTrigger();
+            }
 
             //Reset
             if(CP001Ypos <= 3)
@@ -126,6 +136,8 @@ public class MainQuest002 : MonoBehaviour
     public void StartQuest()
     {
         ThisQuest.SetActive(true);
+        StartQuestTrigger.SetActive(false);
+        EndQuestTrigger.SetActive(false);
         tutText = "Press Space To Jump\nDouble Press Space while in the air to engage/disengage flight mode.\nFly towards falling packages and collect them before they reach the ground.";
         //ObjectiveText = "Collected 0 / 10";
         packagesCollected = 0;
@@ -141,11 +153,60 @@ public class MainQuest002 : MonoBehaviour
         CP008Ypos = CarePackageObject008.transform.position.y;
         CP009Ypos = CarePackageObject009.transform.position.y;
         CP010Ypos = CarePackageObject010.transform.position.y;
+
+        PlayDialogue();//at start of quest
+    }
+
+    public void PlayDialogue()
+    {
+        hud.DialoguePanel.SetActive(true);
+        hud.DialogueSpeakerText.text = "808";
+        hud.SubtitlesText.text = "Must. Intercept. Care-Packages. Before. Packages. Make. Landfall. Engage. Maximum. Thrust.";
+        Invoke(nameof(EndDialogue), 8);
+    }
+
+    private void EndDialogue()
+    {
+        hud.DialoguePanel.SetActive(false);
+    }
+
+    public void PackageCollect()
+    {
+        packagesCollected++;
+    }
+
+    public void SpawnEndQuestTrigger()
+    {
+        EndQuestTrigger.SetActive(true);
+    }
+
+    public void PlayCutscene3()
+    {
+        
+        masterQuestHandler.CutscenePanel.SetActive(true);
+        Cutscene3Video.SetActive(true);
+        Invoke(nameof(StopCutscenes), 10);
+        Invoke(nameof(EndQuest), 10);
+    }
+
+    public void StopCutscenes()
+    {
+        masterQuestHandler.DeactivateVideos();
     }
 
     public void EndQuest()
     {
         ThisQuest.SetActive(false);
+        hud.QuestTitleText.text = "(_open_world_StartCoroutine_Auto)";
+        hud.QuestObjectiveText.text = "Explore";
+        hud.TutorialText.text = "";
+
+        hud.WinPanel.SetActive(true);
+        hud.WonQuestTitleText.text = "_main_quest_002_StartCoroutine_Auto == Operation SFS: Sustenance. For. Survival.";
+        hud.WonQuestObjectivesText.text = "Collected 10 care packages\nYou now have enough food and medical\nsupplies for the human";
+
+        masterQuestHandler.MQ3StartTrigger.SetActive(true);//start of next main quest
+        masterQuestHandler.ActivateSideQuestStartTriggers();//open world
     }
 
 

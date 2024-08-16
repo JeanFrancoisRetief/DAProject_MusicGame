@@ -8,6 +8,8 @@ public class MQ2TriggerScript : MonoBehaviour
     public Quest_Trigger_Type TriggerType;
     [Header("Corresponding Script")]
     public MainQuest002 mainQuest002Script;
+    [Header("ParentObject")]
+    public GameObject ParentObject;
 
     public enum Quest_Trigger_Type
     {
@@ -15,6 +17,7 @@ public class MQ2TriggerScript : MonoBehaviour
         SpawnEnemies,
         PlayCutscene,
         PlayDialogue,
+        CollectPackages,
         END
     }
 
@@ -32,30 +35,45 @@ public class MQ2TriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TriggerType == Quest_Trigger_Type.START)
+        if(other.tag == "Player")
         {
-            mainQuest002Script.StartQuest();
+            if (TriggerType == Quest_Trigger_Type.START)
+            {
+                mainQuest002Script.StartQuest();
+                //gameObject.SetActive(false);
+
+            }
+
+            if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
+            {
+
+            }
+
+            if (TriggerType == Quest_Trigger_Type.PlayCutscene)
+            {
+                //n.a. at end of quest
+            }
+
+            if (TriggerType == Quest_Trigger_Type.PlayDialogue)
+            {
+                mainQuest002Script.PlayDialogue();
+            }
+
+            if (TriggerType == Quest_Trigger_Type.CollectPackages)
+            {
+                mainQuest002Script.PackageCollect();
+                ParentObject.SetActive(false);
+            }
+
+            if (TriggerType == Quest_Trigger_Type.END)
+            {
+                mainQuest002Script.PlayCutscene3();
+                //mainQuest002Script.EndQuest();
+                gameObject.transform.position = new Vector3(0, -500, 0);
+                gameObject.SetActive(false);
+            }
         }
-
-        if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
-        {
-
-        }
-
-        if (TriggerType == Quest_Trigger_Type.PlayCutscene)
-        {
-
-        }
-
-        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
-        {
-            
-        }
-
-        if (TriggerType == Quest_Trigger_Type.END)
-        {
-            mainQuest002Script.EndQuest();
-        }
+        
 
     }
 }
