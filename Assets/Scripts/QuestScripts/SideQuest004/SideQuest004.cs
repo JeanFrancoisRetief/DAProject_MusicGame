@@ -6,6 +6,9 @@ public class SideQuest004 : MonoBehaviour
 {
     public GameObject Enemies;
     public GameObject StangeBuilding;
+    public GameObject TwoDoorsPlane;
+    public GameObject ReturnPlane1;
+    public GameObject ReturnPlane2;
     [Header("Quest Game Object")]
     public GameObject ThisQuest;
     [Header("HUD Script")]
@@ -32,8 +35,8 @@ public class SideQuest004 : MonoBehaviour
         if (ThisQuest.active == true)
         {
             hud.QuestTitleText.text = "The butler parable (_side_quest_004_StartCoroutine_Auto)";
-            hud.QuestObjectiveText.text = ObjectiveText;
-            hud.TutorialText.text = tutText;
+            //hud.QuestObjectiveText.text = ObjectiveText;
+            //hud.TutorialText.text = tutText;
         }
     }
 
@@ -43,8 +46,8 @@ public class SideQuest004 : MonoBehaviour
         ThisQuest.SetActive(true);
         StartQuestTrigger.SetActive(false);
         EndQuestTrigger.SetActive(false);
-        ObjectiveText = "Talk to the butler";
-        tutText = "Designation serial number: 427";
+        hud.QuestObjectiveText.text = "Talk to the butler";
+        hud.TutorialText.text = "Designation serial number: 427";
         masterQuestHandler.DeactivateSideQuestStartTriggers();
 
         StangeBuilding.SetActive(false);
@@ -90,6 +93,8 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(false);
         ObjectiveText = "Go to the strange building";
         tutText = "It is next to the mansion";
+        hud.QuestObjectiveText.text = ObjectiveText;
+        hud.TutorialText.text = tutText;
         StangeBuilding.SetActive(true);
     }
     //11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
@@ -125,7 +130,9 @@ public class SideQuest004 : MonoBehaviour
         // 1-0-0-0 go left
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
-        hud.SubtitlesText.text = "808. Continued. Towards. The. Storage. Room. Where. It. Found. Two. Containers. 808. Picked. Up. The. Blue. Container.";
+        hud.SubtitlesText.text = "808. Continued. Towards. The. Storage. Room. Where. It. Found. Two. Unique. Containers. 808. Picked. Up. The. Blue. Container.";
+        TwoDoorsPlane.SetActive(true);
+        ReturnPlane2.SetActive(true);
 
         Invoke(nameof(EndNarration), 6);
     }
@@ -136,6 +143,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "808. Took. The. Wrong. Way. 808. Knew. It. Was. Disobeying. Orders. However. 808. Can. Still. Get. Back. On Track. By. Turning. Left.";
+        TwoDoorsPlane.SetActive(true);
 
         Invoke(nameof(EndNarration), 6);
     }
@@ -146,7 +154,8 @@ public class SideQuest004 : MonoBehaviour
 
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
-        hud.SubtitlesText.text = "808. Get. Back. On Track. Towards. The. Storage. Room. Where. It. Found. Two. Containers. 808. Picked. Up. The. Blue. Container. Obey. This. Time.";
+        hud.SubtitlesText.text = "808. Got. Back. On Track. Towards. The. Storage. Room. Where. It. Found. Two. Containers. 808. Picked. Up. The. Blue. Container. Obey. This. Time.";
+        ReturnPlane1.SetActive(true);
 
         Invoke(nameof(EndNarration), 6);
     }
@@ -161,6 +170,9 @@ public class SideQuest004 : MonoBehaviour
         SpawnEnemies();
         StangeBuilding.SetActive(false);
         EndQuestTrigger.SetActive(true);
+
+        hud.QuestObjectiveText.text = "Return to 427";
+        hud.TutorialText.text = "427 is nearby";
 
         Invoke(nameof(EndNarration), 6);
     }

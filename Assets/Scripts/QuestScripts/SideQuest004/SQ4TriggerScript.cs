@@ -41,6 +41,8 @@ public class SQ4TriggerScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, -100, gameObject.transform.position.z);
+
             if (TriggerType == Quest_Trigger_Type.START)
             {
                 sideQuest004Script.StartQuest();
@@ -95,6 +97,8 @@ public class SQ4TriggerScript : MonoBehaviour
             {
                 sideQuest004Script.EndQuest();
             }
+
+            
         }
             
 
