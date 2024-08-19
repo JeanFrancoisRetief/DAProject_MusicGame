@@ -67,7 +67,12 @@ public class SideQuest002 : MonoBehaviour
         ObjectiveText = "Find all the band members";
         tutText = "There all around the town\nThey all prefer different music genres.\nAppeal to their individual tastes.";
         masterQuestHandler.DeactivateSideQuestStartTriggers();
-        
+
+        hud.DialoguePanel.SetActive(true);
+        hud.DialogueSpeakerText.text = "808";
+        hud.SubtitlesText.text = "An. Empty. Stage... I. Wonder. Who. Used. To. Play. Gigs. Here.";
+        Invoke(nameof(EndDialogue), 8);
+
     }
 
     public void EndOfQuestDialogue()
@@ -102,6 +107,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.ExplorationMusicTYPE == StateMachineScript.MusicTYPE.Default)
         {
+            BandMemberCounter++;
             //Teleport
             Member818.transform.position = Member818EndPos.position;
             //Dialogue
@@ -125,6 +131,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.CombatMusicTYPE == StateMachineScript.MusicTYPE.Western)
         {
+            BandMemberCounter++;
             //Teleport
             Member828.transform.position = Member828EndPos.position;
             //Dialogue
@@ -147,6 +154,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.VictoryMusicTYPE == StateMachineScript.MusicTYPE.Classical)
         {
+            BandMemberCounter++;
             //Teleport
             Member838.transform.position = Member838EndPos.position;
             //Dialogue
@@ -169,6 +177,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.DefeatMusicTYPE == StateMachineScript.MusicTYPE.Retro)
         {
+            BandMemberCounter++;
             //Teleport
             Member848.transform.position = Member848EndPos.position;
             //Dialogue
@@ -191,6 +200,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.NarrativeMusicTYPE == StateMachineScript.MusicTYPE.AIgenerated)
         {
+            BandMemberCounter++;
             //Teleport
             Member858.transform.position = Member858EndPos.position;
             //Dialogue
@@ -213,6 +223,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.ExplorationMusicTYPE == StateMachineScript.MusicTYPE.AfricanLocal)
         {
+            BandMemberCounter++;
             //Teleport
             Member868.transform.position = Member868EndPos.position;
             //Dialogue
@@ -235,6 +246,7 @@ public class SideQuest002 : MonoBehaviour
     {
         if (stateMachineScript.NarrativeMusicTYPE == StateMachineScript.MusicTYPE.Acoustic)
         {
+            BandMemberCounter++;
             //Teleport
             Member878.transform.position = Member878EndPos.position;
             //Dialogue

@@ -122,6 +122,7 @@ public class SQ2TriggerScript : MonoBehaviour
             if (TriggerType == Quest_Trigger_Type.END)
             {
                 sideQuest002Script.EndOfQuestDialogue();//invokes endquest
+                sideQuest002Script.EndQuestTrigger.transform.position = new Vector3(0, -500, 0);
             }
         }
 
