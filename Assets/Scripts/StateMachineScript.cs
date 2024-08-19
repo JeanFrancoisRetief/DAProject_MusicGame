@@ -58,7 +58,7 @@ public class StateMachineScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(ExplorationMusicTYPE + " " + CombatMusicTYPE + " " + VictoryMusicTYPE + " " + DefeatMusicTYPE + " " + NarrativeMusicTYPE);
+        Debug.Log(ExplorationMusicTYPE + " " + CombatMusicTYPE + " " + VictoryMusicTYPE + " " + DefeatMusicTYPE + " " + NarrativeMusicTYPE);
         Debug.Log(currentState);
 
         //CheckIfInCombat();
