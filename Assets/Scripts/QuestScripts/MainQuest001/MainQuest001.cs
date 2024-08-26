@@ -20,6 +20,7 @@ public class MainQuest001 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ThisQuest.SetActive(false);
         tutText = "WASD to walk\nMouse to use look around";
         ObjectiveText = "Chase the human";
         masterQuestHandler.DeactivateSideQuestStartTriggers();
@@ -59,6 +60,9 @@ public class MainQuest001 : MonoBehaviour
 
         masterQuestHandler.MQ2StartTrigger.SetActive(true);//start of next main quest
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
+
+        //Save quest is DONE
+        masterQuestHandler.MQ1Done = true;
     }
 
     public void PlayCutscene2()

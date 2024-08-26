@@ -96,6 +96,9 @@ public class SideQuest002 : MonoBehaviour
         hud.WonQuestObjectivesText.text = "Got the 8.A.N.D back together";
 
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
+
+        //Save Quest is DONE
+        masterQuestHandler.SQ2Done = true;
     }
 
     private void EndDialogue()

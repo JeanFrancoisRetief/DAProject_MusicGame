@@ -207,6 +207,9 @@ public class MainQuest002 : MonoBehaviour
 
         masterQuestHandler.MQ3StartTrigger.SetActive(true);//start of next main quest
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
+
+        //Save Quest is DONE
+        masterQuestHandler.MQ2Done = true;
     }
 
 

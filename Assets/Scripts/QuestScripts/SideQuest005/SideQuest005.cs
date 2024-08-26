@@ -201,6 +201,9 @@ public class SideQuest005 : MonoBehaviour
 
         masterQuestHandler.MQ3StartTrigger.SetActive(true);//start of next main quest
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
+
+        //Save Quest is DONE
+        masterQuestHandler.SQ5Done = true;
     }
 
 
