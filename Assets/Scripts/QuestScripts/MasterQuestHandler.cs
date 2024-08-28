@@ -107,7 +107,11 @@ public class MasterQuestHandler : MonoBehaviour
     {
         mainQuest001.Cutscene1Video.SetActive(false);
         mainQuest001.Cutscene2Video.SetActive(false);
+
         mainQuest002.Cutscene3Video.SetActive(false);
+
+        mainQuest003.Cutscene4Video.SetActive(false);
+        mainQuest003.Cutscene5Video.SetActive(false);
         //add more as we go
 
         CutscenePanel.SetActive(false);
