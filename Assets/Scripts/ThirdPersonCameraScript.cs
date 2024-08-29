@@ -8,6 +8,7 @@ public class ThirdPersonCameraScript : MonoBehaviour
     public Transform orientation;
     public Transform player;
     public Transform playerObject;
+    public Transform kateObject;
 
     public Rigidbody rb;
 
@@ -47,6 +48,7 @@ public class ThirdPersonCameraScript : MonoBehaviour
             if (inputDir != Vector3.zero)
             {
                 playerObject.forward = Vector3.Slerp(playerObject.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
+                kateObject.forward = Vector3.Slerp(playerObject.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
             }
         }
 
@@ -56,6 +58,7 @@ public class ThirdPersonCameraScript : MonoBehaviour
             orientation.forward = dirToCombatLookAt.normalized;
 
             playerObject.forward = dirToCombatLookAt.normalized;
+            kateObject.forward = dirToCombatLookAt.normalized;
         }
 
         //TEMPORY_____forTESTpurposes______________________________________________________________________________________________________________

@@ -32,30 +32,36 @@ public class MQ3TriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TriggerType == Quest_Trigger_Type.START)
+        if(other.tag == "Player")
         {
-            mainQuest003Script.StartQuest();
+            if (TriggerType == Quest_Trigger_Type.START)
+            {
+                mainQuest003Script.StartQuest();
+                gameObject.transform.position = new Vector3(0, -500, 0);
+            }
+
+            if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
+            {
+                //n.a. 
+            }
+
+            if (TriggerType == Quest_Trigger_Type.PlayCutscene)
+            {
+                //n.a. 
+            }
+
+            if (TriggerType == Quest_Trigger_Type.PlayDialogue)
+            {
+                mainQuest003Script.DialogueTriggered();
+            }
+
+            if (TriggerType == Quest_Trigger_Type.END)
+            {
+                //n.a. after dialogue
+            }
         }
 
-        if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
-        {
-            //n.a. 
-        }
-
-        if (TriggerType == Quest_Trigger_Type.PlayCutscene)
-        {
-            //n.a. 
-        }
-
-        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
-        {
-            mainQuest003Script.DialogueTriggered();
-        }
-
-        if (TriggerType == Quest_Trigger_Type.END)
-        {
-            //n.a. after dialogue
-        }
+        
 
     }
 }

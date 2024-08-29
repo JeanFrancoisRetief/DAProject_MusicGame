@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
     public float flightMaxTime;
     public GameObject FlightParticleSystem;
 
+    [Header("Kate")]
+    public PlayerKate playerKateScript;
+    public bool isKate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
         inFlight = false;
 
         flightTimer = flightMaxTime * 60;
+
+        
     }
 
     // Update is called once per frame
@@ -82,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
         SpeedControl();
 
-        if(!grounded && Input.GetKeyDown(KeyCode.Space))
+        if(!grounded && Input.GetKeyDown(KeyCode.Space) && !isKate)
         {
             inFlight = !inFlight;
             if(inFlight && jumpClickCounter < 2)

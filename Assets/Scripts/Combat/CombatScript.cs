@@ -29,6 +29,10 @@ public class CombatScript : MonoBehaviour
     public int enemyRangedDamage;
     public int knockbackMultiplier;
 
+    [Header("Kate")]
+    public PlayerKate playerKateScript;
+    public bool isKate;
+
     //[Header("Ranged Attack Orientation")]
     //public Transform CombatLookAt;
     //public Transform RangedTriggerOrientation;
@@ -65,7 +69,7 @@ public class CombatScript : MonoBehaviour
             MeleeTriggerObject.SetActive(false);
             RangedTriggerObject.SetActive(true);
         }
-        else if(Input.GetMouseButton(0))
+        else if(Input.GetMouseButton(0) && !isKate)
         {
             MeleeTriggerObject.SetActive(true);
             RangedTriggerObject.SetActive(false);
