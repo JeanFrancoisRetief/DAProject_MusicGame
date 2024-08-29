@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class HUD : MonoBehaviour
 
     [Header("HUD Screen")]
     public GameObject UICanvas;
+
+    [Header("Save Quest Data")]
+    public MasterQuestHandler masterQuestHandlerScript;
 
 
 
@@ -113,6 +117,14 @@ public class HUD : MonoBehaviour
         
 
         WinPanel.SetActive(false);
+    }
+
+    public void OnDefeatScreenRestartClick()
+    {
+        //Save Progress automatically
+        masterQuestHandlerScript.SaveQuests();
+        //Reload Scene
+        SceneManager.LoadScene("MovementAndCameraTestScene");
     }
 
     public void OnMusicButtonClick()
