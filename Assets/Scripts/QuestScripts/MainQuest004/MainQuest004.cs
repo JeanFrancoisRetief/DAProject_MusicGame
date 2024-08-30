@@ -78,7 +78,7 @@ public class MainQuest004 : MonoBehaviour
         hud.WonQuestTitleText.text = "_main_quest_004_StartCoroutine_Auto == The Feature called ‘Empathy’";
         hud.WonQuestObjectivesText.text = "Helped Kate.\nCollected 10 packages.";
 
-        masterQuestHandler.MQ4StartTrigger.SetActive(true);//start of next main quest
+        masterQuestHandler.MQ5StartTrigger.SetActive(true);//start of next main quest
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
 
         //Save Quest is DONE
