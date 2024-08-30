@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class MainQuest005 : MonoBehaviour
 {
+    public Credits CreditsScript;
+
+    public GameObject Player;
+
+    [Header("Spawn Enemies")]
+    public GameObject Boss001;
+    public EnemyScript Boss001ScriptHolder;
+    public GameObject Wave1;
+    public GameObject Wave2;
+    public GameObject Wave3;
+
+    [Header("Teleport Points")]
+    public Transform MovePlayerPos;
+    public Transform MovePlayerBackPos;
+
+
     [Header("Video Parent Objects")]
     public GameObject Cutscene8Video;
     public GameObject Cutscene9Video;
@@ -16,17 +32,24 @@ public class MainQuest005 : MonoBehaviour
     public MasterQuestHandler masterQuestHandler;
 
     [Header("Other Variables")]
-    public GameObject EndQuestTrigger;
+    //public GameObject EndQuestTrigger;
     public GameObject StartQuestTrigger;
+
 
     [HideInInspector] public string tutText;
     [HideInInspector] public string ObjectiveText;
-    [HideInInspector] public bool isCreditsRolling;
+    //[HideInInspector] public bool isCreditsRolling;
+
     // Start is called before the first frame update
     void Start()
     {
         ThisQuest.SetActive(false);
-        isCreditsRolling = false;
+        CreditsScript.isCreditsRolling = false;
+
+        Boss001.SetActive(false);
+        Wave1.SetActive(false);
+        Wave2.SetActive(false);
+        Wave3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,6 +60,29 @@ public class MainQuest005 : MonoBehaviour
             hud.QuestTitleText.text = "All for 001, 001 for All (_main_quest_005_StartCoroutine_Auto)";
             hud.QuestObjectiveText.text = ObjectiveText;
             hud.TutorialText.text = tutText;
+
+
+            if(Boss001ScriptHolder.Health <= 0)
+            {
+                PlayCutscene9();
+                Boss001.SetActive(false);
+                Wave1.SetActive(false);
+                Wave2.SetActive(false);
+                Wave3.SetActive(false);
+            }
+
+            if(CreditsScript.isCreditsDone == true)
+            {
+                EndQuest();
+            }
+
+            if(CreditsScript.isCreditsRolling == true)
+            {
+                masterQuestHandler.CutscenePanel.SetActive(false);
+                Cutscene8Video.SetActive(false);
+                Cutscene9Video.SetActive(false);
+            }    
+            
         }
     }
 
@@ -44,7 +90,7 @@ public class MainQuest005 : MonoBehaviour
     {
         ThisQuest.SetActive(true);
         StartQuestTrigger.SetActive(false);
-        EndQuestTrigger.SetActive(false);
+        //EndQuestTrigger.SetActive(false);
 
         ObjectiveText = "Go to “the party” at the mansion";
         tutText = "Probably a trap";
@@ -189,19 +235,21 @@ public class MainQuest005 : MonoBehaviour
         Invoke(nameof(StopCutscenes), 10);
 
         Invoke(nameof(MovePlayer), 10);
-        
+
+        Invoke(nameof(Spawn001), 12);
+
 
     }
 
     public void PlayCutscene9()
     {
-        //Trigger event
+        
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene9Video.SetActive(true);
         Invoke(nameof(StopCutscenes), 10);
 
         Invoke(nameof(MovePlayerBack), 10);
-        Invoke(RollCredits, 10);
+        Invoke(nameof(RollCredits), 11);
 
 
     }
@@ -213,17 +261,51 @@ public class MainQuest005 : MonoBehaviour
 
     public void MovePlayer()
     {
-        
+        Player.SetActive(false);
+        Player.transform.position = MovePlayerPos.position;
+        Player.SetActive(true);
     }
 
     public void MovePlayerBack()
     {
-        
+        Player.SetActive(false);
+        Player.transform.position = MovePlayerBackPos.position;
+        Player.SetActive(true);
     }
 
     public void RollCredits()
     {
-        isCreditsRolling = true;
+        CreditsScript.isCreditsRolling = true;
+    }
+    //---------------------------ENEMIES---------------------------------------
+
+    public void Spawn001()
+    {
+        Boss001.SetActive(true);
+        Invoke(nameof(Spawn002), 6);
+        Invoke(nameof(Spawn003), 12);
+        Invoke(nameof(Spawn004), 18);
+    }
+
+
+    public void Spawn002()
+    {
+        
+        Wave1.SetActive(true);
+    }
+
+
+    public void Spawn003()
+    {
+        
+        Wave2.SetActive(true);
+    }
+
+
+    public void Spawn004()
+    {
+        
+        Wave3.SetActive(true);
     }
 
 }
