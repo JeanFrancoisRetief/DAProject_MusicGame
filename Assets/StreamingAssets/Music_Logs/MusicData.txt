@@ -1,0 +1,18 @@
+--------MUSIC LOG--------
+
+Order: Exploration, Combat, Victory, Defeat, Cutscenes
+
+2024/09/06 12:45:35 PM - Western Western Western Western Western
+2024/09/06 12:45:58 PM - Retro Retro Retro Retro Retro
+2024/09/06 12:46:01 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/09/06 12:48:04 PM - Acoustic Default Default Default Default
+2024/09/06 12:48:04 PM - Acoustic Acoustic Default Default Default
+2024/09/06 12:48:04 PM - Acoustic Acoustic Acoustic Default Default
+2024/09/06 12:48:04 PM - Acoustic Acoustic Acoustic Acoustic Default
+2024/09/06 12:48:04 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/09/06 12:48:04 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/09/06 12:48:07 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/09/06 12:48:09 PM - Classical Acoustic Acoustic Acoustic Acoustic
+2024/09/06 12:48:13 PM - Classical Acoustic AfricanLocal Acoustic Acoustic
+2024/09/06 12:48:15 PM - Classical Acoustic AfricanLocal Western Acoustic
+2024/09/06 12:48:18 PM - Classical Acoustic AfricanLocal Western Default
