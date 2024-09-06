@@ -186,7 +186,7 @@ public class SideQuest001 : MonoBehaviour
     private void DialogueContinue001()
     {
         hud.DialogueSpeakerText.text = "777";
-        hud.SubtitlesText.text = "Oh. And. Another. Thing. 111. And. 101. You. Are. Unrelyable. Child-Bots. You. Two. Are. Only. Waiting. For. Me. To. Become. Obsolete. So. That. You. Can. Inherent. My. Spare. Parts. And. Data.";
+        hud.SubtitlesText.text = "Oh. And. Another. Thing. 111. And. 101. You. Are. Unreliable. Child-Bots. You. Two. Are. Only. Waiting. For. Me. To. Become. Obsolete. So. That. You. Can. Inherent. My. Spare. Parts. And. Data.";
     }
 
     private void DialogueContinue002()
@@ -258,7 +258,7 @@ public class SideQuest001 : MonoBehaviour
     private void DialogueContinue011()
     {
         hud.DialogueSpeakerText.text = "The Gang";
-        hud.SubtitlesText.text = "Arguing amongst themselves";
+        hud.SubtitlesText.text = "(Arguing amongst themselves)";
 
         //WaveQuestTrigger.SetActive(true);
         SpawnWave1();

@@ -164,7 +164,7 @@ public class SideQuest003 : MonoBehaviour
     private void DialogueContinue001()
     {
         hud.DialogueSpeakerText.text = "808";
-        hud.SubtitlesText.text = "What? Eloborate.";
+        hud.SubtitlesText.text = "What? Elaborate.";
     }
 
     private void DialogueContinue002()
