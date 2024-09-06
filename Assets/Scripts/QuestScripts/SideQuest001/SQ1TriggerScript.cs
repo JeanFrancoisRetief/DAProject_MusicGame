@@ -32,29 +32,34 @@ public class SQ1TriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TriggerType == Quest_Trigger_Type.START)
+        if (other.tag == "Player")
         {
+            if (TriggerType == Quest_Trigger_Type.START)
+            {
+                sideQuest001Script.StartQuest();
 
-        }
+            }
 
-        if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
-        {
+            if (TriggerType == Quest_Trigger_Type.SpawnEnemies)
+            {
+                //sideQuest001Script.SpawnWave1();
+            }
 
-        }
+            if (TriggerType == Quest_Trigger_Type.PlayCutscene)
+            {
+                //n.a. 
+            }
 
-        if (TriggerType == Quest_Trigger_Type.PlayCutscene)
-        {
+            if (TriggerType == Quest_Trigger_Type.PlayDialogue)
+            {
+                //n.a. start of quest
+            }
 
-        }
-
-        if (TriggerType == Quest_Trigger_Type.PlayDialogue)
-        {
-
-        }
-
-        if (TriggerType == Quest_Trigger_Type.END)
-        {
-
+            if (TriggerType == Quest_Trigger_Type.END)
+            {
+                //n.a. after wave 5
+            }
+            gameObject.transform.position = new Vector3(0, -500, 0);
         }
 
     }
