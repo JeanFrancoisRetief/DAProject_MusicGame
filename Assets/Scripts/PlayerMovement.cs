@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public bool grounded;
+    public GameObject RangedJumpAttackTrigger;
 
     [Header("Flight")]
     public bool inFlight;
@@ -132,6 +133,15 @@ public class PlayerMovement : MonoBehaviour
         if(jumpClickCounter <= 0)
         {
             jumpClickCounter = 0;
+        }
+
+        if (grounded)
+        {
+            RangedJumpAttackTrigger.SetActive(false);
+        }
+        else
+        {
+            RangedJumpAttackTrigger.SetActive(true);
         }
 
     }
