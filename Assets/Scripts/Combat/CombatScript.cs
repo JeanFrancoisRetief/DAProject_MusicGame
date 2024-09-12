@@ -29,6 +29,10 @@ public class CombatScript : MonoBehaviour
     public int enemyRangedDamage;
     public int knockbackMultiplier;
 
+    //public GameObject[] EnemiesInScene;
+    GameObject ClosestEnemy;
+    float distance;
+
     [Header("Kate")]
     public PlayerKate playerKateScript;
     public bool isKate;
@@ -47,7 +51,11 @@ public class CombatScript : MonoBehaviour
         RangedTriggerObject.SetActive(false);
 
         //playerHealth = 1000;
+
+        //EnemiesInScene = GameObject.FindGameObjectsWithTag("Enemy"); ;
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -88,11 +96,51 @@ public class CombatScript : MonoBehaviour
             playerHealth++;
         }
 
-        
+        /*
+        foreach (GameObject Enemy in EnemiesInScene)
+        {
+            float distance = Vector3.Distance(Enemy.transform.position, transform.position);
+        }
+
+        */
+        ClosestEnemy = FindClosestEnemy();
+        distance = Vector3.Distance(ClosestEnemy.transform.position, transform.position);
+        if(distance < 20)
+        {
+            stateMachineScript.inCombat = true;
+        }
+        else
+        {
+            stateMachineScript.inCombat = false;
+        }
+
+
+
+
     }
 
-    
+    public GameObject FindClosestEnemy()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
 
+
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "EnemyTrigger")
@@ -114,6 +162,6 @@ public class CombatScript : MonoBehaviour
         }
 
     }
-
+    */
 
 }
