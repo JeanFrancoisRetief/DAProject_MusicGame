@@ -17777,8 +17777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 954.9844, y: -869}
-  m_SizeDelta: {x: 1909.9688, y: 164.9763}
+  m_AnchoredPosition: {x: 291.66064, y: -848}
+  m_SizeDelta: {x: 527.3413, y: 249.9454}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640414863
 MonoBehaviour:
@@ -17815,7 +17815,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "WASD - Move\r\nShift - Sprint\r\n\r\nSpace (on ground) - Jump\r\nSpace
     (in air) - Fly\r\n\r\nE - Switch to Exploration Camera\r\nC - Switch to Combat
-    Camera\r\n\r\nM - Toggle Music Customization Menu (On/Off)\r"
+    Camera\r\n\nHold Left Mouse Button - Melee attack\nHold Right Mouse Button -
+    Aim (in combat cam)\nHold Left+Right Mouse Button - Ranged Attack\n\n\r\nM -
+    Toggle Music Customization Menu (On/Off)\r"
 --- !u!222 &640414864
 CanvasRenderer:
   m_ObjectHideFlags: 0
