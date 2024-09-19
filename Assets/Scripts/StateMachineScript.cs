@@ -5,7 +5,8 @@ using UnityEngine;
 public class StateMachineScript : MonoBehaviour
 {
     public MusicCustomizationScript musicCustomizationScript;
-    public PlayerMovement playerMovementScript; 
+    public PlayerMovement playerMovementScript;
+    public ThirdPersonCameraScript thirdPersonCameraScript;
     public enum State
     {
         Walking,
@@ -103,6 +104,20 @@ public class StateMachineScript : MonoBehaviour
         {
             inCutscene = false;
         }*/
+
+        if(inCombat)
+        {
+            thirdPersonCameraScript.ExploreCam.SetActive(false);
+            thirdPersonCameraScript.CombatCam.SetActive(true);
+            thirdPersonCameraScript.currentCamStyle = ThirdPersonCameraScript.CameraStyle.Combat;
+
+        }
+        else
+        {
+            thirdPersonCameraScript.ExploreCam.SetActive(true);
+            thirdPersonCameraScript.CombatCam.SetActive(false);
+            thirdPersonCameraScript.currentCamStyle = ThirdPersonCameraScript.CameraStyle.Exploration;
+        }
 
 
     }

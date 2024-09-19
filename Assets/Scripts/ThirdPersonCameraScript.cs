@@ -62,14 +62,14 @@ public class ThirdPersonCameraScript : MonoBehaviour
         }
 
         //TEMPORY_____forTESTpurposes______________________________________________________________________________________________________________
-        if(Input.GetKeyDown(KeyCode.C))
+        /*if(Input.GetKeyDown(KeyCode.C))
         {
             SwitchCamType(CameraStyle.Combat);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             SwitchCamType(CameraStyle.Exploration);
-        }
+        }*/
         //_________________________________________________________________________________________________________________________________________
     }
 
@@ -82,5 +82,15 @@ public class ThirdPersonCameraScript : MonoBehaviour
         if (newStyle == CameraStyle.Combat) CombatCam.SetActive(true);
 
         currentCamStyle = newStyle;
+    }
+
+    public void SwitchToCombatCam()
+    {
+        SwitchCamType(CameraStyle.Combat);
+    }
+
+    public void SwitchToExploreCam()
+    {
+        SwitchCamType(CameraStyle.Exploration);
     }
 }

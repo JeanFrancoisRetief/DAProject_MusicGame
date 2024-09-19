@@ -35,8 +35,9 @@ public class HUD : MonoBehaviour
     [Header("Music Screen")]
     public GameObject MusicCanvas;
 
-    [Header("Menu Screen")]
+    [Header("Menu Screens")]
     public GameObject MenuCanvas;
+    public GameObject NonStartMenu;
 
     [Header("HUD Screen")]
     public GameObject UICanvas;
@@ -90,7 +91,7 @@ public class HUD : MonoBehaviour
             //HealthSlider.gameObject.SetActive(false);
         }
 
-        if (WinPanel.active == true || LosePanel.active == true || MusicCanvas.active == true || MenuCanvas.active == true)
+        if (WinPanel.active == true || LosePanel.active == true || MusicCanvas.active == true || MenuCanvas.active == true || NonStartMenu.active == true)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -131,6 +132,11 @@ public class HUD : MonoBehaviour
     {
         MusicCanvas.SetActive(true);
         WinPanel.SetActive(false);
+    }
+
+    public void OnExitMusicScreenClick()
+    {
+        MusicCanvas.SetActive(false);
     }
 
 }

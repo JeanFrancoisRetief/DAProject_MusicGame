@@ -143,6 +143,7 @@ public class MasterQuestHandler : MonoBehaviour
     public void SaveQuests()
     {
         SaveQuestSystem.SaveQuests(this);
+        Debug.Log("Saved Game");
     }
 
     public void LoadQuests()
@@ -214,6 +215,7 @@ public class MasterQuestHandler : MonoBehaviour
             SQ5StartTrigger.SetActive(true);
         }
 
+        Debug.Log("Loaded Game");
     }
 
 }

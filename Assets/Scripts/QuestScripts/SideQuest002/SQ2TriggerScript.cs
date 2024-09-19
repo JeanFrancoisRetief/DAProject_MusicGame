@@ -43,6 +43,7 @@ public class SQ2TriggerScript : MonoBehaviour
             if (TriggerType == Quest_Trigger_Type.START)
             {
                 sideQuest002Script.StartQuest();
+                gameObject.transform.position = new Vector3(0, -600, 0);
             }
 
             if (TriggerType == Quest_Trigger_Type.Member818)
