@@ -401,3 +401,5 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/09/19 11:48:50 AM - Acoustic Acoustic Acoustic Acoustic AfricanLocal
 2024/09/19 11:48:50 AM - Acoustic Acoustic Acoustic Acoustic Acoustic
 2024/09/19 11:48:50 AM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/10/04 9:31:18 AM - Default Default Default Default Default
+2024/10/04 9:31:19 AM - Western Default Default Default Default
