@@ -11,9 +11,13 @@ public class Collectables001 : MonoBehaviour
 
     public GameObject ColectablePanel;
 
+    public int collectableCount;
+    public GameObject WinnerStatue;
+
     // Start is called before the first frame update
     void Start()
     {
+        WinnerStatue.SetActive(false);
         /*for (int i = 0; i < collectables.Length; i++)
         {
             if (collectables[i] == true)
@@ -26,7 +30,10 @@ public class Collectables001 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(collectableCount >= collectables.Length-1)
+        {
+            WinnerStatue.SetActive(true);
+        }
     }
 
     public void OnCollectableMenuClick()

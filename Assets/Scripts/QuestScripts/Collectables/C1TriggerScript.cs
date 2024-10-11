@@ -9,6 +9,8 @@ public class C1TriggerScript : MonoBehaviour
 
     public GameObject ParentCollectableObj;
 
+    
+
     [Header("Corresponding Script")]
     public Collectables001 Collectables001Script;
 
@@ -48,7 +50,7 @@ public class C1TriggerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Collectables001Script.collectables[CollectableIndex] = true;
-
+        Collectables001Script.collectableCount++;
 
         ParentCollectableObj.SetActive(false);
     }
