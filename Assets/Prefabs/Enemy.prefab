@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121710718213631600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7800002, z: 0}
   m_LocalScale: {x: 4, y: 0.25, z: 4}
   m_Children: []
   m_Father: {fileID: 7325646732175098312}
@@ -120,7 +120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2388011174835389551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 1.25}
+  m_LocalPosition: {x: 0, y: 1.7800002, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7325646732175098312}
@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5251627137571200203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.538}
+  m_LocalPosition: {x: 0, y: 1.78, z: 0.538}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1.1343751}
   m_Children: []
   m_Father: {fileID: 7325646732175098312}
@@ -398,7 +398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7325646731861930240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7800002, z: 0}
   m_LocalScale: {x: 40, y: 0.25, z: 40}
   m_Children: []
   m_Father: {fileID: 7325646732175098312}
@@ -496,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7325646731881561368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7800002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4550562547086921182}
@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.5}
+  m_AnchoredPosition: {x: 0, y: 3.2800002}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7325646732834711623
@@ -1100,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049359496197192084, guid: c8ef7b2fa823a584294c10806497b5bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.7800002
       objectReference: {fileID: 0}
     - target: {fileID: 1049359496197192084, guid: c8ef7b2fa823a584294c10806497b5bf, type: 3}
       propertyPath: m_LocalPosition.z
