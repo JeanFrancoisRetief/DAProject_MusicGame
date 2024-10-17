@@ -85,6 +85,7 @@ public class MainQuest001 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "INJURED HUMAN";
         hud.SubtitlesText.text = "(Confused)If you’re going to kill me just do it already!";
+        masterQuestHandler.dialogueScript.MQ1_GP_VoiceLine001.Play();
         Invoke(nameof(DialogueContinue001), 6);
         Invoke(nameof(DialogueContinue002), 12);
         Invoke(nameof(DialogueContinue003), 18);
@@ -95,18 +96,21 @@ public class MainQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "(Resolute)Kill. You? Why. Would. 808. Kill. Doctor. Erin?";
+        masterQuestHandler.dialogueScript.MQ1_GP_VoiceLine002.Play();
     }
 
     private void DialogueContinue002()
     {
         hud.DialogueSpeakerText.text = "INJURED HUMAN";
         hud.SubtitlesText.text = "(Confused)All robots want humans dead nowadays! Wait, did you say Erin?";
+        masterQuestHandler.dialogueScript.MQ1_GP_VoiceLine003.Play();
     }
 
     private void DialogueContinue003()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "(Overridden with medical subroutine) You. Require. Medical. Assistance.";
+        masterQuestHandler.dialogueScript.MQ1_GP_VoiceLine004.Play();
     }
 
     private void EndDialogue()

@@ -36,6 +36,9 @@ public class MasterQuestHandler : MonoBehaviour
     [Header("Collectable Scripts")]
     public Collectables001 collectables001;
 
+    [Header("Dialogue Scripts")]
+    public Dialogue dialogueScript;
+
     [Header("Cutscene Handler")]
     public GameObject CutscenePanel;
 
