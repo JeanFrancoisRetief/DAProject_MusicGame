@@ -55,11 +55,11 @@ public class MainQuest002 : MonoBehaviour
         if (ThisQuest.active == true)
         {
             hud.QuestTitleText.text = "Sustenance. For. Survival. (_main_quest_002_StartCoroutine_Auto)";
-            ObjectiveText = "Care packages collected " + packagesCollected.ToString() + " / 10";
+            ObjectiveText = "Care packages collected " + packagesCollected.ToString() + " / 5";
             hud.QuestObjectiveText.text = ObjectiveText;
             hud.TutorialText.text = tutText;
 
-            if(packagesCollected == 10)
+            if(packagesCollected == 5)
             {
                 ObjectiveText = "Go back to nearby farm house";
                 tutText = "It is next to the nearby barn";
@@ -203,7 +203,7 @@ public class MainQuest002 : MonoBehaviour
 
         hud.WinPanel.SetActive(true);
         hud.WonQuestTitleText.text = "_main_quest_002_StartCoroutine_Auto == Operation SFS: Sustenance. For. Survival.";
-        hud.WonQuestObjectivesText.text = "Collected 10 care packages\nYou now have enough food and medical\nsupplies for the human";
+        hud.WonQuestObjectivesText.text = "Collected 5 care packages\nYou now have enough food and medical\nsupplies for the human";
 
         masterQuestHandler.MQ3StartTrigger.SetActive(true);//start of next main quest
         masterQuestHandler.ActivateSideQuestStartTriggers();//open world
