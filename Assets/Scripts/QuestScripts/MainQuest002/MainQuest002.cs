@@ -162,6 +162,7 @@ public class MainQuest002 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Must. Intercept. Care-Packages. Before. Packages. Make. Landfall. Engage. Maximum. Thrust.";
+        masterQuestHandler.dialogueScript.MQ2_GP_VoiceLine001.Play();
         Invoke(nameof(EndDialogue), 8);
     }
 
