@@ -82,7 +82,7 @@ public class StateMachineScript : MonoBehaviour
         {
             currentState = State.COMBAT;
         }
-        else if(playerMovementScript.inFlight == true)//Player.transform.position.y >= 10)  
+        else if(playerMovementScript.inFlight == true || Player.transform.position.y >= 30)//Player.transform.position.y >= 10)  
         {
             currentState = State.Flying;
         }

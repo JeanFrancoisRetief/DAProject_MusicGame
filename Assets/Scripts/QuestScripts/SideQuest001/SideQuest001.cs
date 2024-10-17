@@ -205,6 +205,8 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "033";
         hud.SubtitlesText.text = "Umm... Guys. We. Have. An. Issue.";
+
+        SpawnWave1();
     }
 
     private void DialogueContinue005()
@@ -261,7 +263,7 @@ public class SideQuest001 : MonoBehaviour
         hud.SubtitlesText.text = "(Arguing amongst themselves)";
 
         //WaveQuestTrigger.SetActive(true);
-        SpawnWave1();
+        
     }
 
     private void DialogueContinue012()

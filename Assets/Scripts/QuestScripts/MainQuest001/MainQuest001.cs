@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainQuest001 : MonoBehaviour
 {
     public GameObject Enemies;
+    public GameObject EndTrigger;
     [Header("Video Parent Objects")]
     public GameObject Cutscene1Video;
     public GameObject Cutscene2Video;
@@ -24,6 +25,8 @@ public class MainQuest001 : MonoBehaviour
         tutText = "WASD to walk\nMouse to use look around";
         ObjectiveText = "Chase the human";
         masterQuestHandler.DeactivateSideQuestStartTriggers();
+
+        EndTrigger.SetActive(false);
     }
 
     // Update is called once per frame
@@ -71,6 +74,9 @@ public class MainQuest001 : MonoBehaviour
         tutText = "It is next to the barn";
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene2Video.SetActive(true);
+
+        EndTrigger.SetActive(true);
+
         Invoke(nameof(StopCutscenes), 10);
     }
 
