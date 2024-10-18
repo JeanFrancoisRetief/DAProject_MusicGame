@@ -70,7 +70,7 @@ public class SideQuest002 : MonoBehaviour
 
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
-        hud.SubtitlesText.text = "An. Empty. Stage... I. Wonder. Who. Used. To. Play. Gigs. Here.";
+        hud.SubtitlesText.text = "(wondering internally) An. Empty. Stage... I. Wonder. Who. Used. To. Play. Gigs. Here.";
         Invoke(nameof(EndDialogue), 8);
 
     }

@@ -51,7 +51,7 @@ public class SideQuest001 : MonoBehaviour
         {
             hud.QuestTitleText.text = "The Gang Gets More Robots (_side_quest_001_StartCoroutine_Auto)";
             hud.QuestObjectiveText.text = ObjectiveText;
-            hud.TutorialText.text = tutText = "Wave: " + WaveCounter.ToString() + "\nEnemies: " + TotalEnemies.ToString();
+            hud.TutorialText.text = tutText = "Wave: " + WaveCounter.ToString(); //+ "\nEnemies: " + TotalEnemies.ToString();
         }
 
 
@@ -161,27 +161,27 @@ public class SideQuest001 : MonoBehaviour
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Hello. I. Am. ---";
         masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine001.Play();
-        Invoke(nameof(DialogueContinue001), 6);
-        Invoke(nameof(DialogueContinue002), 12);
-        Invoke(nameof(DialogueContinue003), 18);
-        Invoke(nameof(DialogueContinue004), 24);
-        Invoke(nameof(DialogueContinue005), 30);
-        Invoke(nameof(DialogueContinue006), 36);
-        Invoke(nameof(DialogueContinue007), 42);
-        Invoke(nameof(DialogueContinue008), 48);
-        Invoke(nameof(DialogueContinue009), 54);
-        Invoke(nameof(DialogueContinue010), 60);
-        Invoke(nameof(DialogueContinue011), 66);
-        Invoke(nameof(DialogueContinue012), 72);
-        Invoke(nameof(DialogueContinue013), 78);
-        Invoke(nameof(DialogueContinue014), 84);
-        Invoke(nameof(DialogueContinue015), 90);
-        Invoke(nameof(DialogueContinue016), 96);
-        Invoke(nameof(DialogueContinue017), 102);
-        Invoke(nameof(DialogueContinue018), 108);
+        Invoke(nameof(DialogueContinue001), 1);
+        Invoke(nameof(DialogueContinue002), 13);
+        Invoke(nameof(DialogueContinue003), 17);
+        Invoke(nameof(DialogueContinue004), 29);
+        Invoke(nameof(DialogueContinue005), 31);
+        Invoke(nameof(DialogueContinue006), 35);
+        Invoke(nameof(DialogueContinue007), 37);
+        Invoke(nameof(DialogueContinue008), 41);
+        Invoke(nameof(DialogueContinue009), 50);
+        Invoke(nameof(DialogueContinue010), 51);
+        Invoke(nameof(DialogueContinue011), 59);
+        Invoke(nameof(DialogueContinue012), 62);
+        Invoke(nameof(DialogueContinue013), 63);
+        Invoke(nameof(DialogueContinue014), 66);
+        Invoke(nameof(DialogueContinue015), 71);
+        Invoke(nameof(DialogueContinue016), 73);
+        Invoke(nameof(DialogueContinue017), 80);
+        Invoke(nameof(DialogueContinue018), 84);
         
-        Invoke(nameof(EndDialogue), 114);
-        Invoke(nameof(EndQuest), 114);
+        Invoke(nameof(EndDialogue), 90);
+        Invoke(nameof(EndQuest), 100);
     }
 
     private void DialogueContinue001()

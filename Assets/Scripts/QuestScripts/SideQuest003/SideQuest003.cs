@@ -53,7 +53,7 @@ public class SideQuest003 : MonoBehaviour
         {
             hud.QuestTitleText.text = "An irl human (_side_quest_003_StartCoroutine_Auto)";
             hud.QuestObjectiveText.text = ObjectiveText;
-            hud.TutorialText.text = tutText = "Wave: " + WaveCounter.ToString() + "\nEnemies: " + TotalEnemies.ToString(); ;
+            hud.TutorialText.text = tutText = "Wave: " + WaveCounter.ToString(); //+ "\nEnemies: " + TotalEnemies.ToString(); ;
         }
     }
 
@@ -155,11 +155,11 @@ public class SideQuest003 : MonoBehaviour
         hud.SubtitlesText.text = "Hello. Designation. 808. I. Have. Found. A. Real. Human.";
         masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine001.Play();
         Invoke(nameof(DialogueContinue001), 6);
-        Invoke(nameof(DialogueContinue002), 12);
-        Invoke(nameof(DialogueContinue003), 18);
-        Invoke(nameof(DialogueContinue004), 24);
-        Invoke(nameof(DialogueContinue005), 30);
-        Invoke(nameof(EndDialogue), 36);
+        Invoke(nameof(DialogueContinue002), 8);
+        Invoke(nameof(DialogueContinue003), 11);
+        Invoke(nameof(DialogueContinue004), 13);
+        Invoke(nameof(DialogueContinue005), 14);
+        Invoke(nameof(EndDialogue), 17);
     }
 
     private void DialogueContinue001()

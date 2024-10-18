@@ -65,10 +65,10 @@ public class SideQuest004 : MonoBehaviour
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "Good. You. Are. Here. Please. Complete. Designated. Task.";
         masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine001.Play();
-        Invoke(nameof(DialogueContinue001), 6);
-        Invoke(nameof(DialogueContinue002), 12);
-        Invoke(nameof(DialogueContinue003), 18);
-        Invoke(nameof(EndDialogue), 24);
+        Invoke(nameof(DialogueContinue001), 4);
+        Invoke(nameof(DialogueContinue002), 8);
+        Invoke(nameof(DialogueContinue003), 20);
+        Invoke(nameof(EndDialogue), 22);
     }
 
     private void DialogueContinue001()

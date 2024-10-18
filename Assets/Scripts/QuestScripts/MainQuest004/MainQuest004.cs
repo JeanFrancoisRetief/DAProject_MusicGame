@@ -41,6 +41,9 @@ public class MainQuest004 : MonoBehaviour
         {
             hud.QuestTitleText.text = "The Feature called ‘Empathy’ (_main_quest_004_StartCoroutine_Auto)";
             hud.QuestObjectiveText.text = ObjectiveText;
+           
+            tutText = "Walk / run towards fallen packages and collect them off of the ground before enemy robots intercept them.\nPackages Collected "
+            + packagesCollected.ToString() + " / 10\nKate can't fly, or melee attack";
             hud.TutorialText.text = tutText;
         }
     }
@@ -52,8 +55,7 @@ public class MainQuest004 : MonoBehaviour
         EndQuestTrigger.SetActive(false);
 
         ObjectiveText = "Help 808";
-        tutText = "Walk / run towards fallen packages and collect them off of the ground before enemy robots intercept them.\nPackages Collected " 
-            + packagesCollected.ToString() + " / 10\nKate can't fly, or melee attack";
+        
 
         masterQuestHandler.DeactivateSideQuestStartTriggers();
 
