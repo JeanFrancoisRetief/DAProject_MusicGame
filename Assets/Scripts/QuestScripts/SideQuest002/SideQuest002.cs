@@ -80,6 +80,7 @@ public class SideQuest002 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "8-A-N-D";
         hud.SubtitlesText.text = "Thanks. For. Bringing. Us. Back. Together.";
+        masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine009.Play();
         Invoke(nameof(EndDialogue), 8);
         Invoke(nameof(EndQuest), 8);
     }
@@ -117,6 +118,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "818";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
 
         }
@@ -126,6 +128,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "818";
             hud.SubtitlesText.text = "While. I. EXPLORE. I. Always. Leave. My. synthesizer's. Settings. On. DEFAULT. A.K.A. The. Best. Setting.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine002.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -141,6 +144,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "828";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -149,6 +153,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "828";
             hud.SubtitlesText.text = "I. Love. The. Sounds. Of. A. DUEL. In. Those. Old. Human. WESTERN. Movies. I. Wonder. If. My. Banjo. Can. Recreate. That. Soundscape.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine003.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -164,6 +169,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "838";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -172,6 +178,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "838";
             hud.SubtitlesText.text = "The. Path. To. VICTORY. Is. Pathed. By. CLASSICAL. Piano. Melodies.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine004.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -187,6 +194,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "848";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -195,6 +203,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "848";
             hud.SubtitlesText.text = "Remember. Those. DEATH. Screens. In. Those. Old. RETRO. Games. I. Can. Make. Those. Tunes. With. My. Voice-Box-Unit.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine005.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -210,6 +219,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "858";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -218,6 +228,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "858";
             hud.SubtitlesText.text = "My. ARTIFICIAL. INTELLIGENCE. Can. Create. Interesting. STORIES. For. The. Background. Vocals.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine006.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -233,6 +244,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "868";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -241,6 +253,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "868";
             hud.SubtitlesText.text = "With. My. Drumming. The. Music. Will. Give. The. Feeling. Of. EXPLORING. The. Old. Earth. Land-mass. 'AFRICA.' Did. You. Know. This. Town. Was. Built. In. Africa. Shortly. Before........";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine007.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }
@@ -256,6 +269,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "878";
             hud.SubtitlesText.text = "I. Like. Your. Taste. In. Music. I'll. Re-join. To. The. 8-A-N-D.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine001.Play();
             Invoke(nameof(EndDialogue), 8);
         }
         else
@@ -264,6 +278,7 @@ public class SideQuest002 : MonoBehaviour
             hud.DialoguePanel.SetActive(true);
             hud.DialogueSpeakerText.text = "878";
             hud.SubtitlesText.text = "Nothing. Better. Than. An. ACOUSTIC. Guitar. As. A. Backtrack. For. A. Good. Story.";
+            masterQuestHandler.dialogueScript.SQ2_GP_VoiceLine008.Play();
             Invoke(nameof(EndDialogue), 8);
         }
     }

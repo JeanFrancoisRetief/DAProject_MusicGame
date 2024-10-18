@@ -230,6 +230,7 @@ public class MainQuest003 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "You’re not starting to worry about lil’ ol’ me. Are you?";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine001.Play();
         Invoke(nameof(DialogueContinue001), 6);
         Invoke(nameof(DialogueContinue002), 12);
         Invoke(nameof(DialogueContinue003), 18);
@@ -241,24 +242,28 @@ public class MainQuest003 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "No! That’s just my compassionEmpathy.scrpt file acting up!";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine002.Play();
     }
 
     private void DialogueContinue002()
     {
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "Sure thing, Bob.";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine003.Play();
     }
 
     private void DialogueContinue003()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Call me that again and I’ll deactivate this bug-ridden code in my system.";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine004.Play();
     }
 
     private void DialogueContinue004()
     {
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "That’s not a bug, it’s definitely a feature, (Pauses) Bob.";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine005.Play();
     }
 
     public void DialogueTriggered()
@@ -266,6 +271,7 @@ public class MainQuest003 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "I’ll head inside, so long. You go out and explore if you want. To keep up appearances. Or you can just (mockingly) “Follow. Me. Inside”";
+        masterQuestHandler.dialogueScript.MQ3_GP_VoiceLine006.Play();
         Invoke(nameof(EndDialogue), 6);
         Invoke(nameof(EndQuest), 6);
     }

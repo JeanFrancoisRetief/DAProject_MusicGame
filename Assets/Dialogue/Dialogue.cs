@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
     public AudioSource MQ3_GP_VoiceLine003;
     public AudioSource MQ3_GP_VoiceLine004;
     public AudioSource MQ3_GP_VoiceLine005;
+    public AudioSource MQ3_GP_VoiceLine006;
     [Header("MQ4")]
     public AudioSource MQ4_GP_VoiceLine001;
     public AudioSource MQ4_GP_VoiceLine002;

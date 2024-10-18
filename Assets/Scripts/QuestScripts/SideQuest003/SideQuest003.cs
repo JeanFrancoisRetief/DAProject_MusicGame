@@ -153,6 +153,7 @@ public class SideQuest003 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "113";
         hud.SubtitlesText.text = "Hello. Designation. 808. I. Have. Found. A. Real. Human.";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine001.Play();
         Invoke(nameof(DialogueContinue001), 6);
         Invoke(nameof(DialogueContinue002), 12);
         Invoke(nameof(DialogueContinue003), 18);
@@ -165,30 +166,35 @@ public class SideQuest003 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "What? Elaborate.";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine002.Play();
     }
 
     private void DialogueContinue002()
     {
         hud.DialogueSpeakerText.text = "113";
         hud.SubtitlesText.text = "It. Is. In. The. Crater. Down. There. Right. Now.";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine003.Play();
     }
 
     private void DialogueContinue003()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "There. Is. Another?";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine004.Play();
     }
 
     private void DialogueContinue004()
     {
         hud.DialogueSpeakerText.text = "113";
         hud.SubtitlesText.text = "'Another'? Elaborate.";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine005.Play();
     }
 
     private void DialogueContinue005()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Goodbye. Must. Investigate.";
+        masterQuestHandler.dialogueScript.SQ3_GP_VoiceLine006.Play();
 
         WaveQuestTrigger.SetActive(true);
     }

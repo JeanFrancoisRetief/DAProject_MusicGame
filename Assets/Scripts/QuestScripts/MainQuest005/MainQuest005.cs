@@ -126,6 +126,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "Where are you? You’re… You’re not going to that party-thing 001 is talking about on every channel?";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine001.Play();
 
         Invoke(nameof(ContinueDialogue001), 6);
         Invoke(nameof(ContinueDialogue002), 12);
@@ -148,12 +149,14 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "(Sarcastically) I would never.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine002.Play();
     }
     public void ContinueDialogue002()
     {
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "You do realise it is probably… no, DEFINITELY a trap!";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine003.Play();
     }
 
     public void ContinueDialogue003()
@@ -161,6 +164,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "I do, it is also an opportunity.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine004.Play();
     }
 
     public void ContinueDialogue004()
@@ -168,6 +172,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "An opportunity to DIE, Bob! To be permanently deleted from this world TO PUT IT IN ROBOT TERMS!";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine005.Play();
     }
 
     public void ContinueDialogue005()
@@ -175,6 +180,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "It’s an opportunity to actually meet 001, and stop him. This “party” is a trap, but not for me.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine006.Play();
     }
 
     public void ContinueDialogue006()
@@ -182,6 +188,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "No, no… It is definitely a trap for you. You… Specifically.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine007.Play();
     }
 
     public void ContinueDialogue007()
@@ -189,6 +196,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "It’s actually probably a trap for you too, hence me not telling you I’m going.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine008.Play();
     }
 
     public void ContinueDialogue008()
@@ -196,6 +204,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "That Lighting bolt fried your circuits worse than I thought! GET BACK HERE RIGHT NOW!";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine009.Play();
     }
 
     public void ContinueDialogue009()
@@ -203,6 +212,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "I need to protect you. (Coldy) Stay. There. Stay. Out. Of. Site. Combat. Protocol. Engaged.";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine010.Play();
     }
 
     public void ContinueDialogue010()
@@ -210,6 +220,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE (over radio)";
         hud.SubtitlesText.text = "Bob, no! Stop!";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine011.Play();
     }
 
     public void ContinueDialogue011()
@@ -217,6 +228,7 @@ public class MainQuest005 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Goodbye, Kate. (Cuts off radio)";
+        masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine012.Play();
     }
 
 

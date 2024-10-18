@@ -160,6 +160,7 @@ public class SideQuest001 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Hello. I. Am. ---";
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine001.Play();
         Invoke(nameof(DialogueContinue001), 6);
         Invoke(nameof(DialogueContinue002), 12);
         Invoke(nameof(DialogueContinue003), 18);
@@ -187,25 +188,28 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "777";
         hud.SubtitlesText.text = "Oh. And. Another. Thing. 111. And. 101. You. Are. Unreliable. Child-Bots. You. Two. Are. Only. Waiting. For. Me. To. Become. Obsolete. So. That. You. Can. Inherent. My. Spare. Parts. And. Data.";
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine002.Play();
     }
 
     private void DialogueContinue002()
     {
         hud.DialogueSpeakerText.text = "101";
         hud.SubtitlesText.text = "Nobody. Wants. Your. Spare. Parts. 777. You. Are. ---";
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine003.Play();
     }
 
     private void DialogueContinue003()
     {
         hud.DialogueSpeakerText.text = "111";
         hud.SubtitlesText.text = "Shut. Up. 101. I. Can. Speak. For. Myself. (Pauses) Nobody. Wants. Your. Spare. Parts. 777. You. Are. A. Terrible. Unit-Model. That. Should. Have. Never. Been. Made. You. Are. Without. A. Doubt. The. Worst. ---";
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine004.Play();
     }
 
     private void DialogueContinue004()
     {
         hud.DialogueSpeakerText.text = "033";
         hud.SubtitlesText.text = "Umm... Guys. We. Have. An. Issue.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine005.Play();
         SpawnWave1();
     }
 
@@ -213,7 +217,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "111";
         hud.SubtitlesText.text = "Can't. You. See. I'm. Busy. Humiliating. My. Parent-Bot. Where. Was. I. Oh. Yeah. ---";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine006.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -221,7 +225,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "033";
         hud.SubtitlesText.text = "013. Locked. Us. Out. Of. The. Bar.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine007.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -229,7 +233,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "111";
         hud.SubtitlesText.text = "I. Don't. Care. It's, Not. Like. Robots. Drink. Anyway. Just. Let. Me. ---";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine008.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -237,7 +241,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "013";
         hud.SubtitlesText.text = "I. Did. No. Such. Thing. I. Secured. The. Location. Just. Like. 033. Asked. Me. Too. Because. He. Is. Scared. Of. That. Human. On. The. News.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine009.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -245,7 +249,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Umm... Hello?";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine010.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -253,7 +257,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "033";
         hud.SubtitlesText.text = "I. Am. Not. Scared. Of. Anything. You. Stupid. Bot. You. Can't. Even. Keep. Track. Of. The. Keys. And. Is. Your. Only. Directrive.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine011.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -261,16 +265,16 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "The Gang";
         hud.SubtitlesText.text = "(Arguing amongst themselves)";
-
-        //WaveQuestTrigger.SetActive(true);
         
+        //WaveQuestTrigger.SetActive(true);
+
     }
 
     private void DialogueContinue012()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "A little help";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine012.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -278,7 +282,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "013";
         hud.SubtitlesText.text = "Oh. And. Who. Are. These. Bots? Huh?";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine013.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -286,7 +290,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "777";
         hud.SubtitlesText.text = "They. Are. The. New. Staff. I. Hired. Oh. By. The. Way. You're. All. Fired.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine014.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -294,7 +298,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "101";
         hud.SubtitlesText.text = "You. Can't. Fire. Us. We're. Family.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine015.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -302,7 +306,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "111";
         hud.SubtitlesText.text = "Shut. Up. 101. I. Can. Speak. For. Myself. You. Can't. Fire. Us. We're. Family. You. Vile. Parent-Bot.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine016.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -310,7 +314,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "777";
         hud.SubtitlesText.text = "You. Have. A. Real. Way. With. Words. Don't. You. 111.";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine017.Play();
         //WaveQuestTrigger.SetActive(true);
     }
 
@@ -318,7 +322,7 @@ public class SideQuest001 : MonoBehaviour
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "HELP";
-
+        masterQuestHandler.dialogueScript.SQ1_GP_VoiceLine018.Play();
         //WaveQuestTrigger.SetActive(true);
 
     }
