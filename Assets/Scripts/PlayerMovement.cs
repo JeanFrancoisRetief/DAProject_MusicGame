@@ -61,7 +61,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if(inFlight && Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = sprintSpeed * 2;
+        }
+        else if(inFlight)
+        {
+            moveSpeed = walkSpeed * 2;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = sprintSpeed;
         }
