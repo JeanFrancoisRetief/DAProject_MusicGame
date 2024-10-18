@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     public float flightTimer;
     public float flightMaxTime;
     public GameObject FlightParticleSystem;
+    public GameObject NonFlightParticleSystem;
 
     [Header("Kate")]
     public PlayerKate playerKateScript;
@@ -111,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
             rb.useGravity = false;
             flightTimer--;
             FlightParticleSystem.SetActive(true);
+            NonFlightParticleSystem.SetActive(false);
         }
         else
         {
@@ -120,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 flightTimer += 0.5f;
             }
             FlightParticleSystem.SetActive(false);
+            NonFlightParticleSystem.SetActive(true);
         }
 
         if(flightTimer <= 0)

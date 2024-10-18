@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     {
         distance = Vector3.Distance(Player.transform.position, transform.position);
 
-        if(distance < 20)
+        if(distance < 25)
         {
             Enemy.SetDestination(Player.transform.position);
         }

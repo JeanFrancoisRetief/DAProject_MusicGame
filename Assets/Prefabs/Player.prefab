@@ -16049,6 +16049,7 @@ MonoBehaviour:
   flightTimer: 0
   flightMaxTime: 5
   FlightParticleSystem: {fileID: 4316669326466962343}
+  NonFlightParticleSystem: {fileID: 4906484832096180711}
   playerKateScript: {fileID: 1320213892978602236}
   isKate: 0
 --- !u!114 &7212533758198927054
@@ -16450,8 +16451,8 @@ Transform:
   - {fileID: 7212533757931799471}
   - {fileID: 866982738822640240}
   - {fileID: 7212533758379536774}
-  - {fileID: 4316669326466962328}
   - {fileID: 4906484832096180696}
+  - {fileID: 4316669326466962328}
   m_Father: {fileID: 7212533758198927051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21669,7 +21670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487463733850641069, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3487463733850641069, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22242,7 +22243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487463733850641069, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3487463733850641069, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
       propertyPath: m_LocalScale.x
@@ -22301,5 +22302,10 @@ PrefabInstance:
 --- !u!4 &4906484832096180696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3487463733850641069, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
+  m_PrefabInstance: {fileID: 8390945236776831861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4906484832096180711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3487463733850641042, guid: 00d239bed8f964845a5d050befb5e59d, type: 3}
   m_PrefabInstance: {fileID: 8390945236776831861}
   m_PrefabAsset: {fileID: 0}

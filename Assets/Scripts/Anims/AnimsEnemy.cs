@@ -18,6 +18,33 @@ public class AnimsEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(enemyMovement.distance <= 4)
+        {
+            animatorEnemy.SetBool("isMelee", true);
+            animatorEnemy.SetBool("isRanged", false);
+            animatorEnemy.SetBool("isRunning", false);
+            animatorEnemy.SetBool("isIdle", false);
+        }
+        else if (enemyMovement.distance <= 14)
+        {
+            animatorEnemy.SetBool("isMelee", false);
+            animatorEnemy.SetBool("isRanged", true);
+            animatorEnemy.SetBool("isRunning", false);
+            animatorEnemy.SetBool("isIdle", false);
+        }
+        else if (enemyMovement.distance <= 25)
+        {
+            animatorEnemy.SetBool("isMelee", false);
+            animatorEnemy.SetBool("isRanged", false);
+            animatorEnemy.SetBool("isRunning", true);
+            animatorEnemy.SetBool("isIdle", false);
+        }
+        else
+        {
+            animatorEnemy.SetBool("isMelee", false);
+            animatorEnemy.SetBool("isRanged", false);
+            animatorEnemy.SetBool("isRunning", false);
+            animatorEnemy.SetBool("isIdle", true);
+        }
     }
 }

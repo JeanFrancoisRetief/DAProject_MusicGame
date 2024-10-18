@@ -26,7 +26,7 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EnemyMovmentScript.distance < 20)
+        if(EnemyMovmentScript.distance < 14)
         {
             ShootAtPlayer();
         }
