@@ -170,6 +170,7 @@ public class SideQuest005 : MonoBehaviour
         hud.DialogueSpeakerText.text = "999";
         float morePackages = packagesNeeded - packagesCollected;
         hud.SubtitlesText.text = "You. Have. Done. Great. Work. Thus. Far. Could. You. Collect. "+ morePackages.ToString() + ". More. Packages. Please.";
+        masterQuestHandler.dialogueScript.SQ5_GP_VoiceLine001.Play();
         Invoke(nameof(EndDialogue), 8);
     }
 

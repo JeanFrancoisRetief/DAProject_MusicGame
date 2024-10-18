@@ -41,6 +41,9 @@ public class MainQuest004 : MonoBehaviour
         {
             hud.QuestTitleText.text = "The Feature called ‘Empathy’ (_main_quest_004_StartCoroutine_Auto)";
             hud.QuestObjectiveText.text = ObjectiveText;
+           
+            tutText = "Walk / run towards fallen packages and collect them off of the ground before enemy robots intercept them.\nPackages Collected "
+            + packagesCollected.ToString() + " / 10\nKate can't fly, or melee attack";
             hud.TutorialText.text = tutText;
         }
     }
@@ -52,8 +55,7 @@ public class MainQuest004 : MonoBehaviour
         EndQuestTrigger.SetActive(false);
 
         ObjectiveText = "Help 808";
-        tutText = "Walk / run towards fallen packages and collect them off of the ground before enemy robots intercept them.\nPackages Collected " 
-            + packagesCollected.ToString() + " / 10\nKate can't fly, or melee attack";
+        
 
         masterQuestHandler.DeactivateSideQuestStartTriggers();
 
@@ -118,6 +120,7 @@ public class MainQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "I have to help him. There are some packages around town that he didn’t collect on his flying excursion getting my supplies.";
+        masterQuestHandler.dialogueScript.MQ4_GP_VoiceLine001.Play();
         Invoke(nameof(EndDialogue), 6);
         
     }
@@ -127,6 +130,7 @@ public class MainQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "I still need more supplies.";
+        masterQuestHandler.dialogueScript.MQ4_GP_VoiceLine002.Play();
         Invoke(nameof(EndDialogue), 6);
 
     }
@@ -136,6 +140,7 @@ public class MainQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "I can’t let him down.";
+        masterQuestHandler.dialogueScript.MQ4_GP_VoiceLine003.Play();
         Invoke(nameof(EndDialogue), 6);
 
     }
@@ -145,6 +150,7 @@ public class MainQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "I can’t let him die!";
+        masterQuestHandler.dialogueScript.MQ4_GP_VoiceLine004.Play();
         Invoke(nameof(EndDialogue), 6);
 
     }
@@ -154,6 +160,7 @@ public class MainQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "KATE";
         hud.SubtitlesText.text = "Okay, that’s enough, back to the lab! I have to save him.";
+        masterQuestHandler.dialogueScript.MQ4_GP_VoiceLine005.Play();
         Invoke(nameof(EndDialogue), 6);
 
     }

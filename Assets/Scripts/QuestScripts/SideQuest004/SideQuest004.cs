@@ -64,28 +64,32 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "Good. You. Are. Here. Please. Complete. Designated. Task.";
-        Invoke(nameof(DialogueContinue001), 6);
-        Invoke(nameof(DialogueContinue002), 12);
-        Invoke(nameof(DialogueContinue003), 18);
-        Invoke(nameof(EndDialogue), 24);
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine001.Play();
+        Invoke(nameof(DialogueContinue001), 4);
+        Invoke(nameof(DialogueContinue002), 8);
+        Invoke(nameof(DialogueContinue003), 20);
+        Invoke(nameof(EndDialogue), 22);
     }
 
     private void DialogueContinue001()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Elaborate. Term. 'Designated. Task.'";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine002.Play();
     }
 
     private void DialogueContinue002()
     {
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "The. Help. Are. Getting. Less. Helpful. Each. Cycle. It. Seems. Designated. Task. Description. Follows. Obtain. Rear-Axle-Lubricant. For. Mayor. Bot. 001.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine003.Play();
     }
 
     private void DialogueContinue003()
     {
         hud.DialogueSpeakerText.text = "808";
         hud.SubtitlesText.text = "Affirmative.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine004.Play();
     }
 
     private void EndDialogue()
@@ -121,6 +125,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "When. 808. Came. To. A. Set. Of. Two. Open. Doors. 808. Took. The. Door. On. Its. Left.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine005.Play();
 
         hud.QuestObjectiveText.text = "Go through the building";
         hud.TutorialText.text = "";
@@ -134,6 +139,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "808. Continued. Towards. The. Storage. Room. Where. It. Found. Two. Unique. Containers. 808. Picked. Up. The. Blue. Container.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine006.Play();
         TwoDoorsPlane.SetActive(true);
         ReturnPlane2.SetActive(true);
 
@@ -146,6 +152,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "808. Took. The. Wrong. Way. 808. Knew. It. Was. Disobeying. Orders. However. 808. Can. Still. Get. Back. On Track. By. Turning. Left.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine008.Play();
         TwoDoorsPlane.SetActive(true);
 
         Invoke(nameof(EndNarration), 6);
@@ -158,6 +165,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "808. Got. Back. On Track. Towards. The. Storage. Room. Where. It. Found. Two. Containers. 808. Picked. Up. The. Blue. Container. Obey. This. Time.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine009.Play();
         ReturnPlane1.SetActive(true);
 
         Invoke(nameof(EndNarration), 6);
@@ -169,7 +177,8 @@ public class SideQuest004 : MonoBehaviour
 
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
-        hud.SubtitlesText.text = "Fine. Here. Is. Some. Enemies. I. Guess... And. 808. Died. Horribly.";
+        hud.SubtitlesText.text = "808. Fine. Here. Is. Some. Enemies. I. Guess... And. 808. Died. Horribly.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine010.Play();
         SpawnEnemies();
         StangeBuilding.SetActive(false);
         EndQuestTrigger.SetActive(true);
@@ -187,6 +196,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "This. Container. Is. Labeled. 'Rear-Acid-Dissolvent.' 808. Thought. He. Could. Pull. A. Prank. On. 001. 808. Was. Incorrect.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine011.Play();
         SpawnEnemies();
         StangeBuilding.SetActive(false);
         EndQuestTrigger.SetActive(true);
@@ -204,6 +214,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "This. Container. Is. Labeled. Rear-Axle-Lubricant. 808. Proceeded. To. Give. It. To. 427.";
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine007.Play();
         StangeBuilding.SetActive(false);
         EndQuestTrigger.SetActive(true);
 
@@ -219,7 +230,7 @@ public class SideQuest004 : MonoBehaviour
         hud.DialoguePanel.SetActive(true);
         hud.DialogueSpeakerText.text = "427";
         hud.SubtitlesText.text = "808. Performed. Exceptionally. It. Must. Increase. Its. Proud-Parameter. By. 22%";
-
+        masterQuestHandler.dialogueScript.SQ4_GP_VoiceLine007.Play();
         //Invoke(nameof(EndNarration), 6);
     }
 
