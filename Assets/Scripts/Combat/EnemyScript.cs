@@ -29,6 +29,7 @@ public class EnemyScript : MonoBehaviour
     {
         if(Health <= 0)
         {
+            Player.stateMachineScript.inCombat = false;
             EnemyParentObject.SetActive(false);
 
         }

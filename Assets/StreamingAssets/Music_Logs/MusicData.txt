@@ -506,3 +506,15 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/10/19 2:29:19 PM - Classical Classical Classical Classical Default
 2024/10/19 2:29:19 PM - Classical Classical Classical Classical Classical
 2024/10/19 2:29:19 PM - Classical Classical Classical Classical Classical
+2024/10/19 2:59:22 PM - Classical Default Default Default Default
+2024/10/19 2:59:22 PM - Classical Classical Default Default Default
+2024/10/19 2:59:22 PM - Classical Classical Classical Default Default
+2024/10/19 2:59:22 PM - Classical Classical Classical Classical Default
+2024/10/19 2:59:22 PM - Classical Classical Classical Classical Classical
+2024/10/19 2:59:22 PM - Classical Classical Classical Classical Classical
+2024/10/22 3:57:25 PM - Classical Default Default Default Default
+2024/10/22 3:57:25 PM - Classical Classical Default Default Default
+2024/10/22 3:57:25 PM - Classical Classical Classical Default Default
+2024/10/22 3:57:25 PM - Classical Classical Classical Classical Default
+2024/10/22 3:57:25 PM - Classical Classical Classical Classical Classical
+2024/10/22 3:57:25 PM - Classical Classical Classical Classical Classical
