@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectables001 : MonoBehaviour
 {                       
                                  // 0     1      2      3       4     5       6      7     8      9      10     11     12
-    public bool[] collectables = { false, false, false, false, false, false, false, false, false, false, false, false, false };
+    public bool[] collectables = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
 
     public GameObject[] menuItems;
 
