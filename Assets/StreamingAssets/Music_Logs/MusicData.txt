@@ -524,3 +524,9 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/10/22 9:28:29 PM - Classical Classical Classical Classical Default
 2024/10/22 9:28:29 PM - Classical Classical Classical Classical Classical
 2024/10/22 9:28:29 PM - Classical Classical Classical Classical Classical
+2024/10/23 1:28:50 PM - Acoustic Default Default Default Default
+2024/10/23 1:28:50 PM - Acoustic Acoustic Default Default Default
+2024/10/23 1:28:50 PM - Acoustic Acoustic Acoustic Default Default
+2024/10/23 1:28:50 PM - Acoustic Acoustic Acoustic Acoustic Default
+2024/10/23 1:28:50 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
+2024/10/23 1:28:50 PM - Acoustic Acoustic Acoustic Acoustic Acoustic
