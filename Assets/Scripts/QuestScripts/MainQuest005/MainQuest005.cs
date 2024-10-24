@@ -128,19 +128,19 @@ public class MainQuest005 : MonoBehaviour
         hud.SubtitlesText.text = "Where are you? You’re… You’re not going to that party-thing 001 is talking about on every channel?";
         masterQuestHandler.dialogueScript.MQ5_GP_VoiceLine001.Play();
 
-        Invoke(nameof(ContinueDialogue001), 6);
-        Invoke(nameof(ContinueDialogue002), 12);
-        Invoke(nameof(ContinueDialogue003), 18);
-        Invoke(nameof(ContinueDialogue004), 24);
-        Invoke(nameof(ContinueDialogue005), 30);
-        Invoke(nameof(ContinueDialogue006), 36);
-        Invoke(nameof(ContinueDialogue007), 42);
-        Invoke(nameof(ContinueDialogue008), 48);
-        Invoke(nameof(ContinueDialogue009), 54);
-        Invoke(nameof(ContinueDialogue010), 60);
-        Invoke(nameof(ContinueDialogue011), 66);
+        Invoke(nameof(ContinueDialogue001), 7);
+        Invoke(nameof(ContinueDialogue002), 8);
+        Invoke(nameof(ContinueDialogue003), 14);
+        Invoke(nameof(ContinueDialogue004), 16);
+        Invoke(nameof(ContinueDialogue005), 22);
+        Invoke(nameof(ContinueDialogue006), 29);
+        Invoke(nameof(ContinueDialogue007), 34);
+        Invoke(nameof(ContinueDialogue008), 38);
+        Invoke(nameof(ContinueDialogue009), 43);
+        Invoke(nameof(ContinueDialogue010), 50);
+        Invoke(nameof(ContinueDialogue011), 52);
 
-        Invoke(nameof(EndDialogue), 72);
+        Invoke(nameof(EndDialogue), 54);
 
     }
 
