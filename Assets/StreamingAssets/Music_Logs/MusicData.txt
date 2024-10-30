@@ -764,3 +764,9 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/10/30 6:01:38 PM - Retro Retro Retro Retro Default
 2024/10/30 6:01:38 PM - Retro Retro Retro Retro Retro
 2024/10/30 6:01:38 PM - Retro Retro Retro Retro Retro
+2024/10/30 6:13:53 PM - AfricanLocal Default Default Default Default
+2024/10/30 6:13:53 PM - AfricanLocal AfricanLocal Default Default Default
+2024/10/30 6:13:53 PM - AfricanLocal AfricanLocal AfricanLocal Default Default
+2024/10/30 6:13:53 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal Default
+2024/10/30 6:13:53 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal
+2024/10/30 6:13:53 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal
