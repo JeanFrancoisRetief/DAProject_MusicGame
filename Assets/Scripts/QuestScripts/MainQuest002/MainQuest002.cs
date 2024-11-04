@@ -62,7 +62,7 @@ public class MainQuest002 : MonoBehaviour
             if(packagesCollected == 5)
             {
                 ObjectiveText = "Go back to nearby farm house";
-                tutText = "It is next to the nearby barn";
+                tutText = "Go back to nearby farm house. It is next to the nearby barn";
                 SpawnEndQuestTrigger();
             }
 

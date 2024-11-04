@@ -101,7 +101,7 @@ public class SideQuest003 : MonoBehaviour
         WaveCounter = 1;
         TotalEnemies = 3;
         EnemyWave1.SetActive(true);
-        Invoke(nameof(SpawnWave2), 24);
+        Invoke(nameof(SpawnWave2), 14);
     }
 
     public void SpawnWave2()
@@ -109,7 +109,7 @@ public class SideQuest003 : MonoBehaviour
         WaveCounter = 2;
         TotalEnemies = 4;
         EnemyWave2.SetActive(true);
-        Invoke(nameof(SpawnWave3), 24);
+        Invoke(nameof(SpawnWave3), 14);
     }
 
     public void SpawnWave3()
@@ -117,7 +117,7 @@ public class SideQuest003 : MonoBehaviour
         WaveCounter = 3;
         TotalEnemies = 5;
         EnemyWave3.SetActive(true);
-        Invoke(nameof(SpawnWave4), 24);
+        Invoke(nameof(SpawnWave4), 14);
     }
 
     public void SpawnWave4()
@@ -125,7 +125,7 @@ public class SideQuest003 : MonoBehaviour
         WaveCounter = 4;
         TotalEnemies = 6;
         EnemyWave4.SetActive(true);
-        Invoke(nameof(SpawnWave5), 24);
+        Invoke(nameof(SpawnWave5), 14);
     }
 
     public void SpawnWave5()
@@ -133,8 +133,8 @@ public class SideQuest003 : MonoBehaviour
         WaveCounter = 5;
         TotalEnemies = 7;
         EnemyWave5.SetActive(true);
-        Invoke(nameof(DespawnWaves), 48);
-        Invoke(nameof(EndQuest), 48);
+        Invoke(nameof(DespawnWaves), 30);
+        Invoke(nameof(EndQuest), 30);
     }
 
     public void DespawnWaves()
