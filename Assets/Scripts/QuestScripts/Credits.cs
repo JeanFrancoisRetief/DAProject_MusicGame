@@ -8,6 +8,7 @@ public class Credits : MonoBehaviour
     public bool isCreditsDone;
 
     public GameObject CreditsText;
+    public GameObject CreditsBackDrop;
 
     public int framecount;
 
@@ -20,12 +21,14 @@ public class Credits : MonoBehaviour
         seconds = 0;
 
         isCreditsDone = false;
+        isCreditsRolling = false;
 
     }
     private void Update()
     {
         if(isCreditsRolling == true)
         {
+            CreditsBackDrop.SetActive(true);
             CreditsText.transform.Translate(Vector3.up);
 
             framecount++;
@@ -42,6 +45,16 @@ public class Credits : MonoBehaviour
                 isCreditsRolling = false;
                 isCreditsDone = true;
             }
+        }
+        else
+        {
+            CreditsBackDrop.SetActive(false);
+        }    
+
+        if(isCreditsDone)
+        {
+            CreditsBackDrop.transform.position = new Vector3(CreditsBackDrop.transform.position.x, CreditsBackDrop.transform.position.y, 100000);
+            CreditsBackDrop.SetActive(false);
         }
 
 
