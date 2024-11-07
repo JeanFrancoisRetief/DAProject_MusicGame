@@ -29,6 +29,10 @@ public class KateTriggers : MonoBehaviour
             kateMovement.destination = kateMovement.Point003;
             gameObject.SetActive(false);
         }
+        if(gameObject.tag == "MQ1Point3")
+        {
+            kateMovement.isAtEnd = true;
+        }
 
     }
 }

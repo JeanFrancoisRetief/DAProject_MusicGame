@@ -15,6 +15,8 @@ public class KateMovement : MonoBehaviour
     public Transform Point003;
 
     public Transform destination;
+
+    public bool isAtEnd;
     //private float distancePoint1;
     //private float distancePoint2;
     //private float distancePoint3;
@@ -25,6 +27,8 @@ public class KateMovement : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("PlayerTarget");
 
         destination = Point001;
+
+        isAtEnd = false;
     }
 
     // Update is called once per frame
@@ -46,6 +50,11 @@ public class KateMovement : MonoBehaviour
         {
             Kate.SetDestination(Kate.transform.position);
         }
+        /*
+        if(Kate.transform.position.x == Point003.position.x && Kate.transform.position.y == Point003.position.y)
+        {
+            isAtEnd = true;
+        }*/
     }
 
     
