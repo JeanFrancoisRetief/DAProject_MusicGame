@@ -10,7 +10,7 @@ public class AnimsNPCKate : MonoBehaviour
     void Start()
     {
         animatorKateNPC.SetBool("isIdle", true);
-        animatorKateNPC.SetBool("isWalking", false);
+        animatorKateNPC.SetBool("isRunning", false);
     }
 
     // Update is called once per frame
@@ -19,12 +19,12 @@ public class AnimsNPCKate : MonoBehaviour
         if(kateMovement.distance < 20 && !kateMovement.isAtEnd)
         {
             animatorKateNPC.SetBool("isIdle", false);
-            animatorKateNPC.SetBool("isWalking", true);
+            animatorKateNPC.SetBool("isRunning", true);
         }
         else
         {
             animatorKateNPC.SetBool("isIdle", true);
-            animatorKateNPC.SetBool("isWalking", false);
+            animatorKateNPC.SetBool("isRunning", false);
         }
     }
 }
