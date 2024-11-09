@@ -19,20 +19,24 @@ public class KateTriggers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "MQ1Point1")
+        if(other.tag == "Player")
         {
-            kateMovement.destination = kateMovement.Point002;
-            gameObject.SetActive(false);
+            if (gameObject.tag == "MQ1Point1")
+            {
+                kateMovement.destination = kateMovement.Point002;
+                gameObject.SetActive(false);
+            }
+            if (gameObject.tag == "MQ1Point2")
+            {
+                kateMovement.destination = kateMovement.Point003;
+                gameObject.SetActive(false);
+            }
+            if (gameObject.tag == "MQ1Point3")
+            {
+                kateMovement.isAtEnd = true;
+            }
         }
-        if (gameObject.tag == "MQ1Point2")
-        {
-            kateMovement.destination = kateMovement.Point003;
-            gameObject.SetActive(false);
-        }
-        if(gameObject.tag == "MQ1Point3")
-        {
-            kateMovement.isAtEnd = true;
-        }
+        
 
     }
 }
