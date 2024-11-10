@@ -146,6 +146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2615354200817107199}
     m_Modifications:
+    - target: {fileID: 2233653481416479744, guid: 775f43ad8fbc0864281aa2ec29a23b4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.066
+      objectReference: {fileID: 0}
     - target: {fileID: 3896898770212732495, guid: 775f43ad8fbc0864281aa2ec29a23b4d, type: 3}
       propertyPath: m_Name
       value: KateObj
