@@ -186,8 +186,8 @@ public class MainQuest002 : MonoBehaviour
         
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene3Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
-        Invoke(nameof(EndQuest), 10);
+        Invoke(nameof(StopCutscenes), 22);
+        Invoke(nameof(EndQuest), 23);
     }
 
     public void StopCutscenes()
