@@ -168,6 +168,8 @@ public class MasterQuestHandler : MonoBehaviour
         SQ4Done = data.SideQuest4Done;
         SQ5Done = data.SideQuest5Done;
 
+        DeactivateVideos();
+
         MQ2StartTrigger.SetActive(false);
         MQ3StartTrigger.SetActive(false);
         MQ4StartTrigger.SetActive(false);

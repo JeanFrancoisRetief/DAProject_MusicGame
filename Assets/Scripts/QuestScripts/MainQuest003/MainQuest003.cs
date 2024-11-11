@@ -129,8 +129,8 @@ public class MainQuest003 : MonoBehaviour
 
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene4Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
-        Invoke(nameof(SpawnWave1), 14);//first wave !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Invoke(nameof(StopCutscenes), 22);
+        Invoke(nameof(SpawnWave1), 24);//first wave !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     }
 
