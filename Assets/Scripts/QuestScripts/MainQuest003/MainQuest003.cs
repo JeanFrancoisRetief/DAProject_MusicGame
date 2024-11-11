@@ -140,8 +140,8 @@ public class MainQuest003 : MonoBehaviour
         tutText ="";
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene5Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
-        Invoke(nameof(SwitchObjective), 10);
+        Invoke(nameof(StopCutscenes), 37);
+        Invoke(nameof(SwitchObjective), 37);
 
     }
 

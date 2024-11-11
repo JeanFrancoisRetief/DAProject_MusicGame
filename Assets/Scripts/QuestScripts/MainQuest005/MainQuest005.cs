@@ -244,11 +244,11 @@ public class MainQuest005 : MonoBehaviour
         //Trigger event
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene8Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
+        Invoke(nameof(StopCutscenes), 41);
 
-        Invoke(nameof(MovePlayer), 10);
+        Invoke(nameof(MovePlayer), 41);
 
-        Invoke(nameof(Spawn001), 12);
+        Invoke(nameof(Spawn001), 43);
 
 
     }
@@ -258,10 +258,10 @@ public class MainQuest005 : MonoBehaviour
         
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene9Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
+        Invoke(nameof(StopCutscenes), 46);
 
-        Invoke(nameof(MovePlayerBack), 10);
-        Invoke(nameof(RollCredits), 11);
+        Invoke(nameof(MovePlayerBack), 46);
+        Invoke(nameof(RollCredits), 46);
 
 
     }

@@ -93,8 +93,8 @@ public class MainQuest004 : MonoBehaviour
 
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene6Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
-        Invoke(nameof(PlayDialogue001), 12);
+        Invoke(nameof(StopCutscenes), 37);
+        Invoke(nameof(PlayDialogue001), 38);
 
     }
 
@@ -103,8 +103,8 @@ public class MainQuest004 : MonoBehaviour
 
         masterQuestHandler.CutscenePanel.SetActive(true);
         Cutscene7Video.SetActive(true);
-        Invoke(nameof(StopCutscenes), 10);
-        Invoke(nameof(EndQuest), 10);
+        Invoke(nameof(StopCutscenes), 50);
+        Invoke(nameof(EndQuest), 50);
 
     }
 
