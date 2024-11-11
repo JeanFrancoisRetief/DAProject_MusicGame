@@ -884,3 +884,9 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/11/10 9:10:46 PM - AIgenerated AIgenerated AIgenerated AIgenerated Default
 2024/11/10 9:10:46 PM - AIgenerated AIgenerated AIgenerated AIgenerated AIgenerated
 2024/11/10 9:10:46 PM - AIgenerated AIgenerated AIgenerated AIgenerated AIgenerated
+2024/11/11 6:43:46 PM - AfricanLocal Default Default Default Default
+2024/11/11 6:43:46 PM - AfricanLocal AfricanLocal Default Default Default
+2024/11/11 6:43:46 PM - AfricanLocal AfricanLocal AfricanLocal Default Default
+2024/11/11 6:43:46 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal Default
+2024/11/11 6:43:46 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal
+2024/11/11 6:43:46 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal

@@ -97,14 +97,15 @@ public class MasterQuestHandler : MonoBehaviour
         
     }
 
-    public void OnMenuStartGameClick() //start of game -- start of Quest 1
+    public void OnMenuStartGameClick() //start of game -- start of Quest 1 ------------------------------------------------------
     {
+        DeactivateVideos();
         mainQuest001.ThisQuest.SetActive(true);
         CutscenePanel.SetActive(true);
         
         mainQuest001.Cutscene1Video.SetActive(true);
         Invoke(nameof(DeactivateVideos), 6);
-    }
+    } //start of game -- start of Quest 1 ------------------------------------------------------
 
     public void DeactivateVideos()
     {
@@ -118,7 +119,9 @@ public class MasterQuestHandler : MonoBehaviour
 
         mainQuest004.Cutscene6Video.SetActive(false);
         mainQuest004.Cutscene7Video.SetActive(false);
-        //add more as we go
+
+        mainQuest005.Cutscene8Video.SetActive(false);
+        mainQuest005.Cutscene9Video.SetActive(false);
 
         CutscenePanel.SetActive(false);
     }

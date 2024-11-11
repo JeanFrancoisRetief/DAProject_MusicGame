@@ -77,7 +77,7 @@ public class MainQuest001 : MonoBehaviour
 
         EndTrigger.SetActive(true);
 
-        Invoke(nameof(StopCutscenes), 10);
+        Invoke(nameof(StopCutscenes), 61);
     }
 
     public void StopCutscenes()
