@@ -908,3 +908,15 @@ Order: Exploration, Combat, Victory, Defeat, Cutscenes
 2024/11/11 7:36:18 PM - AIgenerated AIgenerated AIgenerated AIgenerated Default
 2024/11/11 7:36:18 PM - AIgenerated AIgenerated AIgenerated AIgenerated AIgenerated
 2024/11/11 7:36:18 PM - AIgenerated AIgenerated AIgenerated AIgenerated AIgenerated
+2024/11/11 7:58:58 PM - AfricanLocal Default Default Default Default
+2024/11/11 7:58:58 PM - AfricanLocal AfricanLocal Default Default Default
+2024/11/11 7:58:58 PM - AfricanLocal AfricanLocal AfricanLocal Default Default
+2024/11/11 7:58:58 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal Default
+2024/11/11 7:58:58 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal
+2024/11/11 7:58:58 PM - AfricanLocal AfricanLocal AfricanLocal AfricanLocal AfricanLocal
+2024/11/11 8:00:35 PM - Retro AfricanLocal AfricanLocal AfricanLocal AfricanLocal
+2024/11/11 8:00:35 PM - Retro Retro AfricanLocal AfricanLocal AfricanLocal
+2024/11/11 8:00:35 PM - Retro Retro Retro AfricanLocal AfricanLocal
+2024/11/11 8:00:35 PM - Retro Retro Retro Retro AfricanLocal
+2024/11/11 8:00:35 PM - Retro Retro Retro Retro Retro
+2024/11/11 8:00:35 PM - Retro Retro Retro Retro Retro
