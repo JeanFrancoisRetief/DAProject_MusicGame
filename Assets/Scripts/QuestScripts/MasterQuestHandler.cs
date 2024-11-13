@@ -104,7 +104,7 @@ public class MasterQuestHandler : MonoBehaviour
         CutscenePanel.SetActive(true);
         
         mainQuest001.Cutscene1Video.SetActive(true);
-        Invoke(nameof(DeactivateVideos), 6);
+        Invoke(nameof(DeactivateVideos), 56);
     } //start of game -- start of Quest 1 ------------------------------------------------------
 
     public void DeactivateVideos()
